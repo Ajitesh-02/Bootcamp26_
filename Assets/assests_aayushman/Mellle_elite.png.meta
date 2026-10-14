@@ -1,0 +1,849 @@
+fileFormatVersion: 2
+guid: 62074fc74a29bc64b9f2908ed8d1394d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7363965043457811471
+    second: Mellle_elite_0
+  - first:
+      213: 9103254984451420549
+    second: Mellle_elite_1
+  - first:
+      213: -7223788764578761668
+    second: Mellle_elite_2
+  - first:
+      213: -7048337027857509245
+    second: Mellle_elite_3
+  - first:
+      213: -1586552275139652177
+    second: Mellle_elite_4
+  - first:
+      213: 5573877893015390503
+    second: Mellle_elite_5
+  - first:
+      213: 2614813492263489716
+    second: Mellle_elite_6
+  - first:
+      213: 5294557008398966860
+    second: Mellle_elite_7
+  - first:
+      213: 7781632081850436457
+    second: Mellle_elite_8
+  - first:
+      213: 6970007493318083824
+    second: Mellle_elite_9
+  - first:
+      213: -6943885477401980382
+    second: Mellle_elite_10
+  - first:
+      213: -6615424683331859164
+    second: Mellle_elite_11
+  - first:
+      213: -8978591223948179952
+    second: Mellle_elite_12
+  - first:
+      213: 7495673393823873735
+    second: Mellle_elite_13
+  - first:
+      213: 8532944662473911027
+    second: Mellle_elite_14
+  - first:
+      213: -4178528569191232990
+    second: Mellle_elite_15
+  - first:
+      213: -4717191298238589968
+    second: Mellle_elite_16
+  - first:
+      213: -4776144180280226597
+    second: Mellle_elite_17
+  - first:
+      213: 259431231076848213
+    second: Mellle_elite_18
+  - first:
+      213: -8179696347037066533
+    second: Mellle_elite_19
+  - first:
+      213: 4370834166184522715
+    second: Mellle_elite_20
+  - first:
+      213: -6905562499922544321
+    second: Mellle_elite_21
+  - first:
+      213: -6561236519826890822
+    second: Mellle_elite_22
+  - first:
+      213: 3396256215589209940
+    second: Mellle_elite_23
+  - first:
+      213: -6587811201995736933
+    second: Mellle_elite_24
+  - first:
+      213: -3661485880881916552
+    second: Mellle_elite_25
+  - first:
+      213: -6845564394092996299
+    second: Mellle_elite_26
+  - first:
+      213: 4214945662370015587
+    second: Mellle_elite_27
+  - first:
+      213: -4510956886502435737
+    second: Mellle_elite_28
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Mellle_elite_0
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1975
+        width: 253
+        height: 362
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0462b9e03f023660800000000000000
+      internalID: 7363965043457811471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mellle_elite_1
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 1975
+        width: 241
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 581f7006d22455e70800000000000000
+      internalID: 9103254984451420549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mellle_elite_2
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 1975
+        width: 241
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3433d25462ffbb90800000000000000
+      internalID: -7223788764578761668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mellle_elite_3
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 1975
+        width: 237
+        height: 344
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 384125d11d64f2e90800000000000000
+      internalID: -7048337027857509245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mellle_elite_4
+      rect:
+        serializedVersion: 2
+        x: 1229
+        y: 1975
+        width: 239
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa596b69c1f6bf9e0800000000000000
+      internalID: -1586552275139652177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mellle_elite_5
+      rect:
+        serializedVersion: 2
+        x: 1517
+        y: 1975
+        width: 247
+        height: 362
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 729c59a79646a5d40800000000000000
+      internalID: 5573877893015390503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mellle_elite_6
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 1523
+        width: 199
+        height: 348
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b09340740fa94420800000000000000
+      internalID: 2614813492263489716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mellle_elite_7
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 1525
+        width: 218
+        height: 345
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c40eca02c8b0a7940800000000000000
+      internalID: 5294557008398966860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mellle_elite_8
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 1524
+        width: 225
+        height: 346
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96b8a7b4629edfb60800000000000000
+      internalID: 7781632081850436457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mellle_elite_9
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 1524
+        width: 194
+        height: 346
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f40901f2e07ab060800000000000000
+      internalID: 6970007493318083824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mellle_elite_10
+      rect:
+        serializedVersion: 2
+        x: 1264
+        y: 1524
+        width: 222
+        height: 346
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2221676d2fc52af90800000000000000
+      internalID: -6943885477401980382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mellle_elite_11
+      rect:
+        serializedVersion: 2
+        x: 1570
+        y: 1521
+        width: 200
+        height: 349
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42d47afec4a4134a0800000000000000
+      internalID: -6615424683331859164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mellle_elite_12
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 1062
+        width: 232
+        height: 358
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01601293ad2a56380800000000000000
+      internalID: -8978591223948179952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mellle_elite_13
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 1062
+        width: 214
+        height: 359
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7caf737ec3bf50860800000000000000
+      internalID: 7495673393823873735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mellle_elite_14
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 1064
+        width: 225
+        height: 356
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3faa2d606fb1b6670800000000000000
+      internalID: 8532944662473911027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mellle_elite_15
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 1062
+        width: 229
+        height: 361
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22a0985b762e206c0800000000000000
+      internalID: -4178528569191232990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mellle_elite_16
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 1064
+        width: 222
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f3dceac18b298eb0800000000000000
+      internalID: -4717191298238589968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mellle_elite_17
+      rect:
+        serializedVersion: 2
+        x: 1509
+        y: 1062
+        width: 224
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdc09525c2ab7bdb0800000000000000
+      internalID: -4776144180280226597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mellle_elite_18
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 556
+        width: 272
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5525af3845fa99300800000000000000
+      internalID: 259431231076848213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mellle_elite_19
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 562
+        width: 294
+        height: 380
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bda9b40a281eb7e80800000000000000
+      internalID: -8179696347037066533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mellle_elite_20
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 566
+        width: 390
+        height: 376
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd3b197348258ac30800000000000000
+      internalID: 4370834166184522715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mellle_elite_21
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 566
+        width: 279
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f39bbd95e738a20a0800000000000000
+      internalID: -6905562499922544321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mellle_elite_22
+      rect:
+        serializedVersion: 2
+        x: 1487
+        y: 556
+        width: 272
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abfd56ce52ec1f4a0800000000000000
+      internalID: -6561236519826890822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mellle_elite_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 367
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4574860b80de12f20800000000000000
+      internalID: 3396256215589209940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mellle_elite_24
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 37
+        width: 304
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9874b19d946394a0800000000000000
+      internalID: -6587811201995736933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mellle_elite_25
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 39
+        width: 302
+        height: 375
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 875dcef9df9cf2dc0800000000000000
+      internalID: -3661485880881916552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mellle_elite_27
+      rect:
+        serializedVersion: 2
+        x: 1149
+        y: 37
+        width: 306
+        height: 374
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36963298fbe7e7a30800000000000000
+      internalID: 4214945662370015587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mellle_elite_28
+      rect:
+        serializedVersion: 2
+        x: 1493
+        y: 0
+        width: 299
+        height: 414
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7649bee9c9cd561c0800000000000000
+      internalID: -4510956886502435737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 61c11cb987e7fd942ad81b474e14f4bb
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Mellle_elite_0: 7363965043457811471
+      Mellle_elite_1: 9103254984451420549
+      Mellle_elite_10: -6943885477401980382
+      Mellle_elite_11: -6615424683331859164
+      Mellle_elite_12: -8978591223948179952
+      Mellle_elite_13: 7495673393823873735
+      Mellle_elite_14: 8532944662473911027
+      Mellle_elite_15: -4178528569191232990
+      Mellle_elite_16: -4717191298238589968
+      Mellle_elite_17: -4776144180280226597
+      Mellle_elite_18: 259431231076848213
+      Mellle_elite_19: -8179696347037066533
+      Mellle_elite_2: -7223788764578761668
+      Mellle_elite_20: 4370834166184522715
+      Mellle_elite_21: -6905562499922544321
+      Mellle_elite_22: -6561236519826890822
+      Mellle_elite_23: 3396256215589209940
+      Mellle_elite_24: -6587811201995736933
+      Mellle_elite_25: -3661485880881916552
+      Mellle_elite_26: -6845564394092996299
+      Mellle_elite_27: 4214945662370015587
+      Mellle_elite_28: -4510956886502435737
+      Mellle_elite_3: -7048337027857509245
+      Mellle_elite_4: -1586552275139652177
+      Mellle_elite_5: 5573877893015390503
+      Mellle_elite_6: 2614813492263489716
+      Mellle_elite_7: 5294557008398966860
+      Mellle_elite_8: 7781632081850436457
+      Mellle_elite_9: 6970007493318083824
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

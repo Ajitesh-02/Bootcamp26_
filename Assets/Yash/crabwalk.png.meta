@@ -1,0 +1,381 @@
+fileFormatVersion: 2
+guid: 33a1139d77a4247cca26ec7c0a415356
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7089428616358273771
+    second: crabwalk_0
+  - first:
+      213: 3892566544744685855
+    second: crabwalk_1
+  - first:
+      213: 4530186790244464484
+    second: crabwalk_2
+  - first:
+      213: -940413292264117015
+    second: crabwalk_3
+  - first:
+      213: 6860963375870800647
+    second: crabwalk_4
+  - first:
+      213: 2668876197813118153
+    second: crabwalk_5
+  - first:
+      213: 2502047080041357683
+    second: crabwalk_6
+  - first:
+      213: 1111883146160493691
+    second: crabwalk_7
+  - first:
+      213: 5290065714566405375
+    second: crabwalk_8
+  - first:
+      213: -2498811992480737135
+    second: crabwalk_9
+  - first:
+      213: -498286571156246095
+    second: crabwalk_10
+  - first:
+      213: 4611752714629326803
+    second: crabwalk_11
+  - first:
+      213: 2524127606254213088
+    second: crabwalk_12
+  - first:
+      213: -4110450832771693948
+    second: crabwalk_13
+  - first:
+      213: -4233127381645195812
+    second: crabwalk_14
+  - first:
+      213: 2719804451625949682
+    second: crabwalk_15
+  - first:
+      213: -8515318581509658483
+    second: crabwalk_16
+  - first:
+      213: -2794073301330914796
+    second: crabwalk_17
+  - first:
+      213: -571049377127395196
+    second: crabwalk_18
+  - first:
+      213: 2266607775460914815
+    second: crabwalk_19
+  - first:
+      213: -3157402161896199354
+    second: crabwalk_20
+  - first:
+      213: 605941607179615351
+    second: crabwalk_21
+  - first:
+      213: -3046790356908721679
+    second: crabwalk_22
+  - first:
+      213: -3246002796467870424
+    second: crabwalk_23
+  - first:
+      213: -8585282663436384716
+    second: crabwalk_24
+  - first:
+      213: 274944705536583901
+    second: crabwalk_25
+  - first:
+      213: 3660199014782820751
+    second: crabwalk_26
+  - first:
+      213: -6439255542137754935
+    second: crabwalk_27
+  - first:
+      213: 2162136606679523096
+    second: crabwalk_28
+  - first:
+      213: -6779601023705508245
+    second: crabwalk_29
+  - first:
+      213: 8101275538573384731
+    second: crabwalk_30
+  - first:
+      213: -8387669399272631505
+    second: crabwalk_31
+  - first:
+      213: -8830644807870033458
+    second: crabwalk_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: crabwalk_11
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1127
+        width: 484
+        height: 551
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d7ac6be8ac300040800000000000000
+      internalID: 4611752714629326803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crabwalk_13
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 1124
+        width: 509
+        height: 553
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4824fe5eebeb4f6c0800000000000000
+      internalID: -4110450832771693948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crabwalk_14
+      rect:
+        serializedVersion: 2
+        x: 1451
+        y: 1131
+        width: 497
+        height: 578
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd50f001319e045c0800000000000000
+      internalID: -4233127381645195812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crabwalk_23
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 138
+        width: 482
+        height: 628
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 825ab9897a1e3f2d0800000000000000
+      internalID: -3246002796467870424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crabwalk_25
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 146
+        width: 505
+        height: 534
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd8e162c0ccc0d300800000000000000
+      internalID: 274944705536583901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crabwalk_26
+      rect:
+        serializedVersion: 2
+        x: 1451
+        y: 138
+        width: 502
+        height: 543
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f816d538c93abc230800000000000000
+      internalID: 3660199014782820751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 57a43da4c6c554e1fb92d220af06ed47
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      crabwalk_0: 7089428616358273771
+      crabwalk_1: 3892566544744685855
+      crabwalk_10: -498286571156246095
+      crabwalk_11: 4611752714629326803
+      crabwalk_12: 2524127606254213088
+      crabwalk_13: -4110450832771693948
+      crabwalk_14: -4233127381645195812
+      crabwalk_15: 2719804451625949682
+      crabwalk_16: -8515318581509658483
+      crabwalk_17: -2794073301330914796
+      crabwalk_18: -571049377127395196
+      crabwalk_19: 2266607775460914815
+      crabwalk_2: 4530186790244464484
+      crabwalk_20: -3157402161896199354
+      crabwalk_21: 605941607179615351
+      crabwalk_22: -3046790356908721679
+      crabwalk_23: -3246002796467870424
+      crabwalk_24: -8585282663436384716
+      crabwalk_25: 274944705536583901
+      crabwalk_26: 3660199014782820751
+      crabwalk_27: -6439255542137754935
+      crabwalk_28: 2162136606679523096
+      crabwalk_29: -6779601023705508245
+      crabwalk_3: -940413292264117015
+      crabwalk_30: 8101275538573384731
+      crabwalk_31: -8387669399272631505
+      crabwalk_32: -8830644807870033458
+      crabwalk_4: 6860963375870800647
+      crabwalk_5: 2668876197813118153
+      crabwalk_6: 2502047080041357683
+      crabwalk_7: 1111883146160493691
+      crabwalk_8: 5290065714566405375
+      crabwalk_9: -2498811992480737135
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

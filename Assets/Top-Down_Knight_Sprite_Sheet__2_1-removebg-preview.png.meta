@@ -1,0 +1,1989 @@
+fileFormatVersion: 2
+guid: 4a0f7f9f34d4bb042bbb8515c201f3e6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7245179756354985566
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_0
+  - first:
+      213: -5696269928153188231
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_1
+  - first:
+      213: 8248175675992212856
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_2
+  - first:
+      213: -884811850260188809
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_3
+  - first:
+      213: -6973171829126417434
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_4
+  - first:
+      213: -8115735555275613349
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_5
+  - first:
+      213: 6803588186376898911
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_6
+  - first:
+      213: -355774959393394850
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_7
+  - first:
+      213: 8084838692390261364
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_8
+  - first:
+      213: 947064105170552206
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_9
+  - first:
+      213: -6650504267493213389
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_10
+  - first:
+      213: -3867713342213135860
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_11
+  - first:
+      213: 1815876852152017944
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_12
+  - first:
+      213: 2919285589899913850
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_13
+  - first:
+      213: 3050861709360899520
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_14
+  - first:
+      213: -5495901616759340175
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_15
+  - first:
+      213: -3647982321732956841
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_16
+  - first:
+      213: 2030744725976518139
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_17
+  - first:
+      213: -342390489980669665
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_18
+  - first:
+      213: -6547232892653972225
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_19
+  - first:
+      213: 5068100163772962640
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_20
+  - first:
+      213: -1170526796702823538
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_21
+  - first:
+      213: -5792735489139901536
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_22
+  - first:
+      213: 7898565600614720167
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_23
+  - first:
+      213: -6544778560908233863
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_24
+  - first:
+      213: 557032045088386462
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_25
+  - first:
+      213: 8839220018294240073
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_26
+  - first:
+      213: -3006614381720914067
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_27
+  - first:
+      213: 8430950470523208246
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_28
+  - first:
+      213: -2581282910228573667
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_29
+  - first:
+      213: 3082454711661722664
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_30
+  - first:
+      213: -4561531805379585602
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_31
+  - first:
+      213: 9141817849916556057
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_32
+  - first:
+      213: -5130160432030402004
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_33
+  - first:
+      213: 7489840554340681276
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_34
+  - first:
+      213: -6708884386455714252
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_35
+  - first:
+      213: 42444723288979890
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_36
+  - first:
+      213: 4426243798384617508
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_37
+  - first:
+      213: -8598124896559356257
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_38
+  - first:
+      213: 3033089242811267695
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_39
+  - first:
+      213: -6900246657872840827
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_40
+  - first:
+      213: -2405552288673172113
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_41
+  - first:
+      213: -4036609782457095273
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_42
+  - first:
+      213: -8066497512820879037
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_43
+  - first:
+      213: -5340190358768228900
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_44
+  - first:
+      213: 4020786678991564337
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_45
+  - first:
+      213: -2169393398321410137
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_46
+  - first:
+      213: 558240724960301913
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_47
+  - first:
+      213: -5411169065973011756
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_48
+  - first:
+      213: -6132728618906954974
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_49
+  - first:
+      213: 3133538225895084504
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_50
+  - first:
+      213: 4478912948347560319
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_51
+  - first:
+      213: 1520498047991844421
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_52
+  - first:
+      213: 3406759035065303041
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_53
+  - first:
+      213: 2932922323900006797
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_54
+  - first:
+      213: -7385483549809142276
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_55
+  - first:
+      213: -7933387106020135246
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_56
+  - first:
+      213: 4074662648342531145
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_57
+  - first:
+      213: 262458638281479140
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_58
+  - first:
+      213: -9003447731495561661
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_59
+  - first:
+      213: -6440031976670934714
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_60
+  - first:
+      213: -8464848470661795845
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_61
+  - first:
+      213: 8222497530200698671
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_62
+  - first:
+      213: 6010462371116629190
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_63
+  - first:
+      213: -3885210187462784746
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_64
+  - first:
+      213: -5319607181969954286
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_65
+  - first:
+      213: -4202498407935143323
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_66
+  - first:
+      213: -3601711476761416897
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_67
+  - first:
+      213: 2008650054094928609
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_68
+  - first:
+      213: 5022891026180655472
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_69
+  - first:
+      213: -6524190335927849608
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_70
+  - first:
+      213: -8731907286374894041
+    second: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_71
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 395
+        width: 34
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a12c90f563f37b90800000000000000
+      internalID: -7245179756354985566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 395
+        width: 34
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97870b33ea8c2f0b0800000000000000
+      internalID: -5696269928153188231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 395
+        width: 35
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 875888c9318677270800000000000000
+      internalID: 8248175675992212856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 395
+        width: 35
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7717f246f4488b3f0800000000000000
+      internalID: -884811850260188809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 395
+        width: 34
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e3b827ba215a3f90800000000000000
+      internalID: -6973171829126417434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 395
+        width: 34
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5b1ac0f28d1f5f80800000000000000
+      internalID: -8115735555275613349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_6
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 395
+        width: 35
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f590a0798633b6e50800000000000000
+      internalID: 6803588186376898911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_7
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 395
+        width: 34
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5fa0653f88001bf0800000000000000
+      internalID: -355774959393394850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_8
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 395
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 472514694fd133070800000000000000
+      internalID: 8084838692390261364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_9
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 342
+        width: 37
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e85c63039c5a42d00800000000000000
+      internalID: 947064105170552206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_10
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 342
+        width: 34
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33bf8d6ca99a4b3a0800000000000000
+      internalID: -6650504267493213389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_11
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 342
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c02e850153f135ac0800000000000000
+      internalID: -3867713342213135860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_12
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 342
+        width: 35
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8142068406a433910800000000000000
+      internalID: 1815876852152017944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_13
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 342
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7aa6e7e6c2638820800000000000000
+      internalID: 2919285589899913850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_14
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 342
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c52c4d7f86d65a20800000000000000
+      internalID: 3050861709360899520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_15
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 342
+        width: 37
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 173809c1992aab3b0800000000000000
+      internalID: -5495901616759340175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_16
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 342
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75dc33ef763cf5dc0800000000000000
+      internalID: -3647982321732956841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_17
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 342
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfd0455a197ae2c10800000000000000
+      internalID: 2030744725976518139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_18
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 284
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f11fa36d9a59f3bf0800000000000000
+      internalID: -342390489980669665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_19
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 284
+        width: 34
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff45b937f5e8325a0800000000000000
+      internalID: -6547232892653972225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_20
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 284
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05759cb3f32855640800000000000000
+      internalID: 5068100163772962640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_21
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 284
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8bc372841471cfe0800000000000000
+      internalID: -1170526796702823538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_22
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 284
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ab740c83c11c9fa0800000000000000
+      internalID: -5792735489139901536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_23
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 284
+        width: 34
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a2a2cbb0975d9d60800000000000000
+      internalID: 7898565600614720167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_24
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 284
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 973f87713964c25a0800000000000000
+      internalID: -6544778560908233863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_25
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 284
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9da00891b9fab700800000000000000
+      internalID: 557032045088386462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_26
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 284
+        width: 34
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94333f146c73baa70800000000000000
+      internalID: 8839220018294240073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_27
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 228
+        width: 34
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d67b1f8462c5646d0800000000000000
+      internalID: -3006614381720914067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_28
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 228
+        width: 33
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 632c27aa8c0c00570800000000000000
+      internalID: 8430950470523208246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_29
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 228
+        width: 35
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d121a0f8ed07d2cd0800000000000000
+      internalID: -2581282910228573667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_30
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 228
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82c73dc8a3417ca20800000000000000
+      internalID: 3082454711661722664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_31
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 228
+        width: 34
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb914b4bdfe22b0c0800000000000000
+      internalID: -4561531805379585602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_32
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 228
+        width: 33
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9130a9926e24ede70800000000000000
+      internalID: 9141817849916556057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_33
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 228
+        width: 33
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2a301094420ec8b0800000000000000
+      internalID: -5130160432030402004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_34
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 228
+        width: 33
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c368ac12d4241f760800000000000000
+      internalID: 7489840554340681276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_35
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 228
+        width: 34
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 436842a123145e2a0800000000000000
+      internalID: -6708884386455714252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_36
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 173
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b9ba3e304bc69000800000000000000
+      internalID: 42444723288979890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_37
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 173
+        width: 28
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 428adfb884d2d6d30800000000000000
+      internalID: 4426243798384617508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_38
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 173
+        width: 28
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f96232e16f25da880800000000000000
+      internalID: -8598124896559356257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_39
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 173
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6af2d9a892b71a20800000000000000
+      internalID: 3033089242811267695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_40
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 173
+        width: 27
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 587b9e649366d30a0800000000000000
+      internalID: -6900246657872840827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_41
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 173
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f65f10940f2cd9ed0800000000000000
+      internalID: -2405552288673172113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_42
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 173
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79b27cb2ac41bf7c0800000000000000
+      internalID: -4036609782457095273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_43
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 173
+        width: 28
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3415dbe004b0e0090800000000000000
+      internalID: -8066497512820879037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_44
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 173
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd567a88925d3e5b0800000000000000
+      internalID: -5340190358768228900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_45
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 123
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13e2ae67e24bcc730800000000000000
+      internalID: 4020786678991564337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_46
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 123
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7af89fab234c4e1e0800000000000000
+      internalID: -2169393398321410137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_47
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 123
+        width: 28
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9535a6e4bf44fb700800000000000000
+      internalID: 558240724960301913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_48
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 123
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4daa813776aa7e4b0800000000000000
+      internalID: -5411169065973011756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_49
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 123
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 223dd2e40db24eaa0800000000000000
+      internalID: -6132728618906954974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_50
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 123
+        width: 28
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d1959c0a609c7b20800000000000000
+      internalID: 3133538225895084504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_51
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 123
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f716722a89b482e30800000000000000
+      internalID: 4478912948347560319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_52
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 123
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54e8a303be4e91510800000000000000
+      internalID: 1520498047991844421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_53
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 123
+        width: 28
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1008b68ea4d374f20800000000000000
+      internalID: 3406759035065303041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_54
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 63
+        width: 28
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d818fd57055d3b820800000000000000
+      internalID: 2932922323900006797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_55
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 63
+        width: 29
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf5922767dd718990800000000000000
+      internalID: -7385483549809142276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_56
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 63
+        width: 28
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2be6100c572f6e190800000000000000
+      internalID: -7933387106020135246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_57
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 63
+        width: 28
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94c4206171c1c8830800000000000000
+      internalID: 4074662648342531145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_58
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 63
+        width: 27
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e3100fadb074a300800000000000000
+      internalID: 262458638281479140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_59
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 63
+        width: 28
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34619629df35d0380800000000000000
+      internalID: -9003447731495561661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_60
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 63
+        width: 27
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6494f58b90960a6a0800000000000000
+      internalID: -6440031976670934714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_61
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 63
+        width: 29
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bffe1b42a21d68a80800000000000000
+      internalID: -8464848470661795845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_62
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 63
+        width: 28
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2fa32660fd2c1270800000000000000
+      internalID: 8222497530200698671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_63
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 12
+        width: 26
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cc32468ea3796350800000000000000
+      internalID: 6010462371116629190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_64
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 12
+        width: 28
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6194d825be5f41ac0800000000000000
+      internalID: -3885210187462784746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_65
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 12
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21a6016d375fc26b0800000000000000
+      internalID: -5319607181969954286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_66
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 13
+        width: 28
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56291e9b6f9bda5c0800000000000000
+      internalID: -4202498407935143323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_67
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 13
+        width: 27
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3b203c9e76240ec0800000000000000
+      internalID: -3601711476761416897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_68
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 13
+        width: 26
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1eab568f49820eb10800000000000000
+      internalID: 2008650054094928609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_69
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 12
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 079cef0a6c4e4b540800000000000000
+      internalID: 5022891026180655472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_70
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 13
+        width: 27
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87debf3c47b6575a0800000000000000
+      internalID: -6524190335927849608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_71
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 12
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 726baff269802d680800000000000000
+      internalID: -8731907286374894041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_0: -7245179756354985566
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_1: -5696269928153188231
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_10: -6650504267493213389
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_11: -3867713342213135860
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_12: 1815876852152017944
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_13: 2919285589899913850
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_14: 3050861709360899520
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_15: -5495901616759340175
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_16: -3647982321732956841
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_17: 2030744725976518139
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_18: -342390489980669665
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_19: -6547232892653972225
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_2: 8248175675992212856
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_20: 5068100163772962640
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_21: -1170526796702823538
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_22: -5792735489139901536
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_23: 7898565600614720167
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_24: -6544778560908233863
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_25: 557032045088386462
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_26: 8839220018294240073
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_27: -3006614381720914067
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_28: 8430950470523208246
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_29: -2581282910228573667
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_3: -884811850260188809
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_30: 3082454711661722664
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_31: -4561531805379585602
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_32: 9141817849916556057
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_33: -5130160432030402004
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_34: 7489840554340681276
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_35: -6708884386455714252
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_36: 42444723288979890
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_37: 4426243798384617508
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_38: -8598124896559356257
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_39: 3033089242811267695
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_4: -6973171829126417434
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_40: -6900246657872840827
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_41: -2405552288673172113
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_42: -4036609782457095273
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_43: -8066497512820879037
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_44: -5340190358768228900
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_45: 4020786678991564337
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_46: -2169393398321410137
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_47: 558240724960301913
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_48: -5411169065973011756
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_49: -6132728618906954974
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_5: -8115735555275613349
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_50: 3133538225895084504
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_51: 4478912948347560319
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_52: 1520498047991844421
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_53: 3406759035065303041
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_54: 2932922323900006797
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_55: -7385483549809142276
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_56: -7933387106020135246
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_57: 4074662648342531145
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_58: 262458638281479140
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_59: -9003447731495561661
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_6: 6803588186376898911
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_60: -6440031976670934714
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_61: -8464848470661795845
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_62: 8222497530200698671
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_63: 6010462371116629190
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_64: -3885210187462784746
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_65: -5319607181969954286
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_66: -4202498407935143323
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_67: -3601711476761416897
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_68: 2008650054094928609
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_69: 5022891026180655472
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_7: -355774959393394850
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_70: -6524190335927849608
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_71: -8731907286374894041
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_8: 8084838692390261364
+      Top-Down_Knight_Sprite_Sheet__2_1-removebg-preview_9: 947064105170552206
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

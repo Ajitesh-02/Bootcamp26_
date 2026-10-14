@@ -1,0 +1,899 @@
+fileFormatVersion: 2
+guid: 1a835f4f951504644aa54623a6a507e5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2625513092241142330
+    second: Melle_0
+  - first:
+      213: -5810153044778344640
+    second: Melle_1
+  - first:
+      213: -626793917194240459
+    second: Melle_2
+  - first:
+      213: 2275498047049077476
+    second: Melle_3
+  - first:
+      213: -439002770633323278
+    second: Melle_4
+  - first:
+      213: 2990388718871427165
+    second: Melle_5
+  - first:
+      213: -2453104243205887663
+    second: Melle_6
+  - first:
+      213: 6150113752763350342
+    second: Melle_7
+  - first:
+      213: -7878581259194462917
+    second: Melle_8
+  - first:
+      213: -5198168710945065158
+    second: Melle_9
+  - first:
+      213: -5764605664107689363
+    second: Melle_10
+  - first:
+      213: -217256653560123148
+    second: Melle_11
+  - first:
+      213: 5577944376902372508
+    second: Melle_12
+  - first:
+      213: 2817290103989521545
+    second: Melle_13
+  - first:
+      213: -5783437171604242628
+    second: Melle_14
+  - first:
+      213: 1061848901282570593
+    second: Melle_15
+  - first:
+      213: 8069959460038354759
+    second: Melle_16
+  - first:
+      213: 2782842142458717941
+    second: Melle_17
+  - first:
+      213: -4771653369063307724
+    second: Melle_18
+  - first:
+      213: 3506874437569787066
+    second: Melle_19
+  - first:
+      213: 3785011740182555400
+    second: Melle_20
+  - first:
+      213: -2526502706707388720
+    second: Melle_21
+  - first:
+      213: -6146345485966438411
+    second: Melle_22
+  - first:
+      213: -8095312516869207050
+    second: Melle_23
+  - first:
+      213: -6988762382505829494
+    second: Melle_24
+  - first:
+      213: -1824194232527897056
+    second: Melle_25
+  - first:
+      213: -7993626666823326880
+    second: Melle_26
+  - first:
+      213: -551951233363449095
+    second: Melle_27
+  - first:
+      213: -3352585125925901715
+    second: Melle_28
+  - first:
+      213: 4204101447697622442
+    second: Melle_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Melle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1846
+        width: 362
+        height: 458
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cd44dfc0cd409bd0800000000000000
+      internalID: -2625513092241142330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melle_1
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 1847
+        width: 271
+        height: 365
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04f155bd6903e5fa0800000000000000
+      internalID: -5810153044778344640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melle_2
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 1846
+        width: 267
+        height: 348
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53ef242d04e2d47f0800000000000000
+      internalID: -626793917194240459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melle_3
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 1846
+        width: 262
+        height: 313
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e2947dea61349f10800000000000000
+      internalID: 2275498047049077476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melle_4
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 1846
+        width: 272
+        height: 349
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fc0df85e4958e9f0800000000000000
+      internalID: -439002770633323278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melle_5
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 1846
+        width: 298
+        height: 458
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d58baa032beff7920800000000000000
+      internalID: 2990388718871427165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melle_6
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 1434
+        width: 266
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 159a5ba10b2d4fdd0800000000000000
+      internalID: -2453104243205887663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melle_7
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 1434
+        width: 209
+        height: 342
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64d34b99fd7995550800000000000000
+      internalID: 6150113752763350342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melle_8
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 1434
+        width: 220
+        height: 330
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3d0aa75618a9a290800000000000000
+      internalID: -7878581259194462917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melle_9
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 1440
+        width: 238
+        height: 308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a37b19539156cd7b0800000000000000
+      internalID: -5198168710945065158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melle_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1434
+        width: 231
+        height: 365
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6a08a0d0b10000b0800000000000000
+      internalID: -5764605664107689363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melle_11
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 1434
+        width: 232
+        height: 342
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f0757389362cfcf0800000000000000
+      internalID: -217256653560123148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melle_12
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 976
+        width: 241
+        height: 365
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9c472a8bd6d86d40800000000000000
+      internalID: 5577944376902372508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melle_13
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 976
+        width: 237
+        height: 365
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98cc4854c66091720800000000000000
+      internalID: 2817290103989521545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melle_14
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 982
+        width: 236
+        height: 348
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3f3dbdc88a1dbfa0800000000000000
+      internalID: -5783437171604242628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melle_15
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 977
+        width: 224
+        height: 358
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 161261623f17cbe00800000000000000
+      internalID: 1061848901282570593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melle_16
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 982
+        width: 242
+        height: 363
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 747a3675f514eff60800000000000000
+      internalID: 8069959460038354759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melle_17
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 976
+        width: 243
+        height: 365
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f62d373f24ae9620800000000000000
+      internalID: 2782842142458717941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melle_18
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 506
+        width: 246
+        height: 294
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4368fa9ca8ea7cdb0800000000000000
+      internalID: -4771653369063307724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melle_19
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 506
+        width: 244
+        height: 313
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab4be3388bbeaa030800000000000000
+      internalID: 3506874437569787066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melle_20
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 512
+        width: 288
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80ba344bf10178430800000000000000
+      internalID: 3785011740182555400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melle_21
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 512
+        width: 284
+        height: 306
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d6a4aa9c2f00fcd0800000000000000
+      internalID: -2526502706707388720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melle_22
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 512
+        width: 226
+        height: 313
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ff0522685bc3baa0800000000000000
+      internalID: -6146345485966438411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melle_23
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 506
+        width: 250
+        height: 301
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fbcc3e182ca7af80800000000000000
+      internalID: -8095312516869207050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melle_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 335
+        height: 332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8b902324ade20f90800000000000000
+      internalID: -6988762382505829494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melle_25
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 42
+        width: 220
+        height: 302
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02ebbd0b2092fa6e0800000000000000
+      internalID: -1824194232527897056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melle_26
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 41
+        width: 284
+        height: 303
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 063e7e806eee01190800000000000000
+      internalID: -7993626666823326880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melle_27
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 48
+        width: 312
+        height: 301
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fa680217431758f0800000000000000
+      internalID: -551951233363449095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melle_28
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 42
+        width: 250
+        height: 302
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6aade937993971d0800000000000000
+      internalID: -3352585125925901715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melle_29
+      rect:
+        serializedVersion: 2
+        x: 1587
+        y: 0
+        width: 269
+        height: 339
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa5e8bd0ef7f75a30800000000000000
+      internalID: 4204101447697622442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 05676e01283dad24ea2e5777a3255b6d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Melle_0: -2625513092241142330
+      Melle_1: -5810153044778344640
+      Melle_10: -5764605664107689363
+      Melle_11: -217256653560123148
+      Melle_12: 5577944376902372508
+      Melle_13: 2817290103989521545
+      Melle_14: -5783437171604242628
+      Melle_15: 1061848901282570593
+      Melle_16: 8069959460038354759
+      Melle_17: 2782842142458717941
+      Melle_18: -4771653369063307724
+      Melle_19: 3506874437569787066
+      Melle_2: -626793917194240459
+      Melle_20: 3785011740182555400
+      Melle_21: -2526502706707388720
+      Melle_22: -6146345485966438411
+      Melle_23: -8095312516869207050
+      Melle_24: -6988762382505829494
+      Melle_25: -1824194232527897056
+      Melle_26: -7993626666823326880
+      Melle_27: -551951233363449095
+      Melle_28: -3352585125925901715
+      Melle_29: 4204101447697622442
+      Melle_3: 2275498047049077476
+      Melle_4: -439002770633323278
+      Melle_5: 2990388718871427165
+      Melle_6: -2453104243205887663
+      Melle_7: 6150113752763350342
+      Melle_8: -7878581259194462917
+      Melle_9: -5198168710945065158
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

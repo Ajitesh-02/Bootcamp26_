@@ -1,0 +1,663 @@
+fileFormatVersion: 2
+guid: de820630f7035b54eb32847ffed1bf45
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4224178920016414413
+    second: airslash (1)_0
+  - first:
+      213: 836666311308711307
+    second: airslash (1)_1
+  - first:
+      213: 6745644345455614157
+    second: airslash (1)_2
+  - first:
+      213: 6592819159859312106
+    second: airslash (1)_3
+  - first:
+      213: 7427372395717974154
+    second: airslash (1)_4
+  - first:
+      213: -7463168353582792746
+    second: airslash (1)_5
+  - first:
+      213: 2443575421499348324
+    second: airslash (1)_6
+  - first:
+      213: 1696630199927024537
+    second: airslash (1)_7
+  - first:
+      213: -9193306071173110886
+    second: airslash (1)_8
+  - first:
+      213: 870121864236706117
+    second: airslash (1)_9
+  - first:
+      213: 8781005424754893008
+    second: airslash (1)_10
+  - first:
+      213: -6799775830609446200
+    second: airslash (1)_11
+  - first:
+      213: 4531627882045257317
+    second: airslash (1)_12
+  - first:
+      213: 482922563502956645
+    second: airslash (1)_13
+  - first:
+      213: -7321837969903164909
+    second: airslash (1)_14
+  - first:
+      213: 7973895844778790355
+    second: airslash (1)_15
+  - first:
+      213: 8343717896877826665
+    second: airslash (1)_16
+  - first:
+      213: -687175579158374933
+    second: airslash (1)_17
+  - first:
+      213: 1642290915126271256
+    second: airslash (1)_18
+  - first:
+      213: 9050344687745151842
+    second: airslash (1)_19
+  - first:
+      213: -376460966487131583
+    second: airslash (1)_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: airslash (1)_0
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 665
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc6854bd85c4f9a30800000000000000
+      internalID: 4224178920016414413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: airslash (1)_1
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 633
+        width: 162
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b859719c39f6c9b00800000000000000
+      internalID: 836666311308711307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: airslash (1)_2
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 607
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc81100dac75d9d50800000000000000
+      internalID: 6745644345455614157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: airslash (1)_3
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 599
+        width: 31
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae5bdcb78166e7b50800000000000000
+      internalID: 6592819159859312106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: airslash (1)_4
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 151
+        width: 497
+        height: 461
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a88df4d87d3531760800000000000000
+      internalID: 7427372395717974154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: airslash (1)_5
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 575
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dfb2c98cef7d6890800000000000000
+      internalID: -7463168353582792746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: airslash (1)_6
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 551
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 465185436e259e120800000000000000
+      internalID: 2443575421499348324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: airslash (1)_7
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 543
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99ba9dd7d24ab8710800000000000000
+      internalID: 1696630199927024537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: airslash (1)_8
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 509
+        width: 195
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a93e84426d0da6080800000000000000
+      internalID: -9193306071173110886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: airslash (1)_9
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 526
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5492125b93b431c00800000000000000
+      internalID: 870121864236706117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: airslash (1)_10
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 491
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d02b49f8e56cd970800000000000000
+      internalID: 8781005424754893008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: airslash (1)_11
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 135
+        width: 222
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cabc38a8e752a1a0800000000000000
+      internalID: -6799775830609446200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: airslash (1)_12
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 196
+        width: 32
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56630939c8393ee30800000000000000
+      internalID: 4531627882045257317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: airslash (1)_13
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 160
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5606d9b438fa3b600800000000000000
+      internalID: 482922563502956645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: airslash (1)_14
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 135
+        width: 24
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31264fcb82b936a90800000000000000
+      internalID: -7321837969903164909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: airslash (1)_15
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 135
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ddc008f508f8ae60800000000000000
+      internalID: 7973895844778790355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: airslash (1)_16
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 144
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 962e8756837dac370800000000000000
+      internalID: 8343717896877826665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: airslash (1)_17
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 108
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be511f99379a676f0800000000000000
+      internalID: -687175579158374933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: airslash (1)_18
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 109
+        width: 42
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81dd3f5d2e69ac610800000000000000
+      internalID: 1642290915126271256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: airslash (1)_19
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 117
+        width: 50
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 263b4efea88499d70800000000000000
+      internalID: 9050344687745151842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: airslash (1)_20
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 74
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14afbbcdeba86caf0800000000000000
+      internalID: -376460966487131583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      airslash (1)_0: 4224178920016414413
+      airslash (1)_1: 836666311308711307
+      airslash (1)_10: 8781005424754893008
+      airslash (1)_11: -6799775830609446200
+      airslash (1)_12: 4531627882045257317
+      airslash (1)_13: 482922563502956645
+      airslash (1)_14: -7321837969903164909
+      airslash (1)_15: 7973895844778790355
+      airslash (1)_16: 8343717896877826665
+      airslash (1)_17: -687175579158374933
+      airslash (1)_18: 1642290915126271256
+      airslash (1)_19: 9050344687745151842
+      airslash (1)_2: 6745644345455614157
+      airslash (1)_20: -376460966487131583
+      airslash (1)_3: 6592819159859312106
+      airslash (1)_4: 7427372395717974154
+      airslash (1)_5: -7463168353582792746
+      airslash (1)_6: 2443575421499348324
+      airslash (1)_7: 1696630199927024537
+      airslash (1)_8: -9193306071173110886
+      airslash (1)_9: 870121864236706117
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

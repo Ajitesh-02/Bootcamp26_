@@ -1,0 +1,241 @@
+fileFormatVersion: 2
+guid: 1403dbf3ad88b47cdb0aaa6d6b5f7d87
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3693394708584005722
+    second: crabattack_0
+  - first:
+      213: -7180868241815470580
+    second: crabattack_1
+  - first:
+      213: -8991985817124141938
+    second: crabattack_2
+  - first:
+      213: -7359863946162499834
+    second: crabattack_3
+  - first:
+      213: 576786621656408361
+    second: crabattack_4
+  - first:
+      213: -427109694670043750
+    second: crabattack_5
+  - first:
+      213: 4616201679151505857
+    second: crabattack_6
+  - first:
+      213: -305868227957471076
+    second: crabattack_7
+  - first:
+      213: 3600116309314382856
+    second: crabattack_8
+  - first:
+      213: 242293267513865438
+    second: crabattack_9
+  - first:
+      213: -8248519903664601435
+    second: crabattack_10
+  - first:
+      213: -1538277244736874429
+    second: crabattack_11
+  - first:
+      213: -5807611806599782747
+    second: crabattack_12
+  - first:
+      213: 9094031957423515112
+    second: crabattack_13
+  - first:
+      213: -8680285080140836511
+    second: crabattack_14
+  - first:
+      213: -2262425544910742347
+    second: crabattack_15
+  - first:
+      213: 5120890937488670740
+    second: crabattack_16
+  - first:
+      213: -8117366543246264335
+    second: crabattack_17
+  - first:
+      213: -8389925933443053329
+    second: crabattack_18
+  - first:
+      213: 8652516470205098238
+    second: crabattack_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 25
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: crabattack_0
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 319
+        width: 160
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5005744be2914330800000000000000
+      internalID: 3693394708584005722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crabattack_5
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 377
+        width: 45
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a950111eef9921af0800000000000000
+      internalID: -427109694670043750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 50fe10ee12cfd44ba885869617c3d290
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      crabattack_0: 3693394708584005722
+      crabattack_1: -7180868241815470580
+      crabattack_10: -8248519903664601435
+      crabattack_11: -1538277244736874429
+      crabattack_12: -5807611806599782747
+      crabattack_13: 9094031957423515112
+      crabattack_14: -8680285080140836511
+      crabattack_15: -2262425544910742347
+      crabattack_16: 5120890937488670740
+      crabattack_17: -8117366543246264335
+      crabattack_18: -8389925933443053329
+      crabattack_19: 8652516470205098238
+      crabattack_2: -8991985817124141938
+      crabattack_3: -7359863946162499834
+      crabattack_4: 576786621656408361
+      crabattack_5: -427109694670043750
+      crabattack_6: 4616201679151505857
+      crabattack_7: -305868227957471076
+      crabattack_8: 3600116309314382856
+      crabattack_9: 242293267513865438
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

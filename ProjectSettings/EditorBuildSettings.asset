@@ -8,6 +8,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: b624a8cc8278e7a4aa990cafe6b92370
+  - enabled: 1
+    path: Assets/Scenes/MelleDungeon.unity
+    guid: 30001a1b0c9e76043b711b4f9906ff6f
+  - enabled: 1
+    path: Assets/Scenes/NandiniStartScene.unity
+    guid: b387c4ac1b0f1624b8be963f2177f82f
+  - enabled: 1
+    path: Assets/Scenes/PlayerMovement.unity
+    guid: 5998070e988c898499f3937feccc7e5f
+  - enabled: 1
+    path: Assets/Scenes/rangeddungeon.unity
+    guid: 920a7b609cfc63c489729aa01d965e62
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
