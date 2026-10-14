@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class DemoMovement : MonoBehaviour
 {
     [Header("Movement")]
     public float speed = 7f;

@@ -243,10 +243,6 @@ public class PlayerMovement : MonoBehaviour
         {
             isOnGround = true;
         }
-        if (collision2D.gameObject.CompareTag("Spikes"))
-        {
-            TakeDamage(25);
-            transform.position = Vector3.zero;
-        }
+       
     }
 }

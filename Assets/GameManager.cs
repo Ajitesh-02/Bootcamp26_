@@ -18,12 +18,11 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        // Simple Singleton setup (You can expand this later when adding DontDestroyOnLoad)
+        // Singleton setup with DontDestroyOnLoad
         if (Instance == null)
         {
             Instance = this;
-            // Uncomment the line below later when you are ready to make it persist across scenes:
-            // DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject);
         }
         else
         {

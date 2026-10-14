@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelTrigger : MonoBehaviour
 {
@@ -6,7 +7,7 @@ public class LevelTrigger : MonoBehaviour
     [Tooltip("Type the exact name of the Unity Scene you want to load.")]
     public string sceneToLoad;
 
-    [Tooltip("Enter the level number (1, 2, or 3) for restriction checks.")]
+    [Tooltip("Enter the level number (1-6).")]
     public int levelNumber;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -16,7 +17,28 @@ public class LevelTrigger : MonoBehaviour
         {
             if (GameManager.Instance != null)
             {
-                GameManager.Instance.TryLoadScene(sceneToLoad, levelNumber);
+                // Levels 4, 5, and 6 complete Levels 1, 2, and 3
+                if (levelNumber >= 4 && levelNumber <= 6)
+                {
+                    GameManager.Instance.CompleteLevel(levelNumber - 3);
+
+                    // Load directly without progression restrictions
+                    if (!string.IsNullOrEmpty(sceneToLoad))
+                    {
+                        SceneManager.LoadScene(sceneToLoad);
+                    }
+                    else
+                    {
+                        Debug.LogError("Scene name is empty!");
+                    }
+                }
+                else
+                {
+                    // Levels 1, 2, and 3 use the existing restriction logic
+                    GameManager.Instance.TryLoadScene(
+                        sceneToLoad, levelNumber
+                    );
+                }
             }
             else
             {
