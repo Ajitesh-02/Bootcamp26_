@@ -37,15 +37,31 @@ public class LightningBolt : MonoBehaviour
         transform.Translate(direction * speed * Time.deltaTime, Space.World);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private bool hasHit;
+
+    private void OnTriggerEnter2D(Collider2D other) { HandleHit(other); }
+
+    // The bolt's collider is not a trigger, so enemy hits arrive here
+    private void OnCollisionEnter2D(Collision2D collision) { HandleHit(collision.collider); }
+
+    private void HandleHit(Collider2D other)
     {
+        if (hasHit) return;
+
         // Ignore environment or player collisions
         if (other.CompareTag("Ground") || other.CompareTag("Spikes") || other.CompareTag("Player"))
         {
             return;
         }
 
-        
+        // Damage enemies, then explode
+        IDamageable target = other.GetComponentInParent<IDamageable>();
+        if (target != null && !target.IsDead)
+        {
+            hasHit = true;
+            target.TakeDamage(damage);
+            Explode();
+        }
     }
 
     private void Explode()

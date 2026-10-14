@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 /// <summary>
@@ -8,7 +9,7 @@ using UnityEngine;
 /// </summary>
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Collider2D))]
-public class EnemyAi : MonoBehaviour
+public class EnemyAi : MonoBehaviour, IDamageable
 {
     [Header("Target (found by tag)")]
     [SerializeField] private string playerTag = "Player";
@@ -27,6 +28,29 @@ public class EnemyAi : MonoBehaviour
     [Header("Sprite")]
     [Tooltip("Tick if your sprite artwork faces LEFT by default.")]
     [SerializeField] private bool spriteFacesLeft = false;
+
+    [Header("Health")]
+    [SerializeField] private int maxHealth = 60;
+    [SerializeField] private Color hitFlashColor = new Color(1f, 0.25f, 0.25f, 1f);
+    [SerializeField] private float deathFadeTime = 0.6f;
+
+    [Header("Damage To Player")]
+    [SerializeField] private int attackDamage = 10;
+    [Tooltip("When in the attack animation the hit lands (0 = start, 1 = end).")]
+    [Range(0f, 1f)]
+    [SerializeField] private float hitMoment = 0.5f;
+    [Tooltip("Extra reach on top of Attack Range, so a player stepping back slightly still gets hit.")]
+    [SerializeField] private float hitTolerance = 0.5f;
+
+    private int currentHealth;
+    private bool isDead;
+    private bool damageDealt;
+    private float hitTime;
+    private SpriteRenderer sr;
+    private Color baseColor = Color.white;
+    private PlayerMovement playerHealth;
+
+    public bool IsDead => isDead;
 
     private Rigidbody2D rb;
     private Collider2D col;
@@ -52,6 +76,9 @@ public class EnemyAi : MonoBehaviour
         rb.freezeRotation = true;
         rb.interpolation = RigidbodyInterpolation2D.Interpolate;
         rb.linearDamping = 0f;   // Unity 2022 or older: rb.drag = 0f
+        sr = GetComponentInChildren<SpriteRenderer>();
+        if (sr != null) baseColor = sr.color;
+        currentHealth = maxHealth;
 
         facingRight = (transform.localScale.x > 0f) != spriteFacesLeft;
 
@@ -60,7 +87,9 @@ public class EnemyAi : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!FindPlayer())
+        if (isDead) return;
+
+        if (!FindPlayer() || (playerHealth != null && playerHealth.IsDead))
         {
             Stop();
             return;
@@ -69,6 +98,13 @@ public class EnemyAi : MonoBehaviour
         // Stand still until the attack animation is over
         if (isAttacking)
         {
+            // Deal damage once, at the hit moment of the attack animation
+            if (!damageDealt && Time.time >= hitTime)
+            {
+                damageDealt = true;
+                TryHitPlayer();
+            }
+
             if (Time.time >= attackEndTime) isAttacking = false;
             else { Stop(); return; }
         }
@@ -104,7 +140,9 @@ public class EnemyAi : MonoBehaviour
     private void StartAttack()
     {
         isAttacking = true;
+        damageDealt = false;
         attackEndTime = Time.time + attackDuration;
+        hitTime = Time.time + attackDuration * hitMoment;
         nextAttackTime = Time.time + Mathf.Max(attackCooldown, attackDuration);
         anim.SetTrigger(AttackHash);
     }
@@ -140,7 +178,71 @@ public class EnemyAi : MonoBehaviour
         if (playerCol == null) return false;
 
         player = p.transform;
+        playerHealth = p.GetComponentInParent<PlayerMovement>();
+        if (playerHealth == null) playerHealth = p.GetComponentInChildren<PlayerMovement>();
         return true;
+    }
+
+    // ---------------- Combat ----------------
+    private void TryHitPlayer()
+    {
+        if (playerHealth == null || player == null || playerCol == null) return;
+
+        float dx = player.position.x - transform.position.x;
+        float dy = Mathf.Abs(player.position.y - transform.position.y);
+        float gapX = Mathf.Max(0f, Mathf.Abs(dx) - (col.bounds.extents.x + playerCol.bounds.extents.x));
+
+        if (gapX <= attackRange + hitTolerance && dy <= maxHeightDifference)
+        {
+            playerHealth.TakeDamage(attackDamage);
+        }
+    }
+
+    public void TakeDamage(int amount)
+    {
+        if (isDead) return;
+
+        currentHealth -= amount;
+        if (sr != null) StartCoroutine(HitFlash());
+
+        if (currentHealth <= 0)
+        {
+            currentHealth = 0;
+            Die();
+        }
+    }
+
+    private IEnumerator HitFlash()
+    {
+        sr.color = hitFlashColor;
+        yield return new WaitForSeconds(0.12f);
+        if (!isDead) sr.color = baseColor;
+    }
+
+    private void Die()
+    {
+        isDead = true;
+        isAttacking = false;
+        Stop();
+        rb.linearVelocity = Vector2.zero;
+        rb.simulated = false;
+        col.enabled = false;
+        if (anim != null) anim.speed = 0f;
+        StartCoroutine(FadeAndDestroy());
+    }
+
+    private IEnumerator FadeAndDestroy()
+    {
+        float t = 0f;
+        while (t < deathFadeTime && sr != null)
+        {
+            t += Time.deltaTime;
+            Color c = hitFlashColor;
+            c.a = 1f - t / deathFadeTime;
+            sr.color = c;
+            yield return null;
+        }
+        Destroy(gameObject);
     }
 
     private void Stop()

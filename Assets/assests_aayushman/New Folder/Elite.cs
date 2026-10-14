@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 /// <summary>
@@ -8,7 +9,7 @@ using UnityEngine;
 /// </summary>
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Collider2D))]
-public class Elite : MonoBehaviour
+public class Elite : MonoBehaviour, IDamageable
 {
     [Header("Target (found by tag)")]
     [SerializeField] private string playerTag = "Player";
@@ -31,6 +32,36 @@ public class Elite : MonoBehaviour
     [SerializeField] private bool spriteFacesLeft = false;
     [Tooltip("Tick if ONLY the walking animation faces the wrong way. Flips the sprite while walking.")]
     [SerializeField] private bool flipWhileWalking = true;
+
+    [Header("Health")]
+    [SerializeField] private int maxHealth = 150;
+    [SerializeField] private Color hitFlashColor = new Color(1f, 0.25f, 0.25f, 1f);
+    [SerializeField] private float deathFadeTime = 0.8f;
+
+    [Header("Damage To Player")]
+    [SerializeField] private int attackDamage = 20;
+    [Tooltip("When in the attack animation the hit lands (0 = start, 1 = end).")]
+    [Range(0f, 1f)]
+    [SerializeField] private float hitMoment = 0.5f;
+    [Tooltip("Extra reach on top of Attack Range, so a player stepping back slightly still gets hit.")]
+    [SerializeField] private float hitTolerance = 0.5f;
+
+    [Header("Drop On Death")]
+    [Tooltip("Key = opens the locked door.  Crystal = lets the player use the exit.  None = drops nothing.")]
+    [SerializeField] private CollectibleType dropType = CollectibleType.Key;
+    [Tooltip("Your PNG for the item. Leave empty to drop a coloured square (gold = Key, cyan = Crystal).")]
+    [SerializeField] private Sprite dropSprite;
+    [Tooltip("Size of the dropped item in world units (its biggest side).")]
+    [SerializeField] private float dropSize = 0.8f;
+
+    private int currentHealth;
+    private bool isDead;
+    private bool damageDealt;
+    private float hitTime;
+    private Color baseColor = Color.white;
+    private PlayerMovement playerHealth;
+
+    public bool IsDead => isDead;
 
     private SpriteRenderer sr;
     private Rigidbody2D rb;
@@ -62,6 +93,8 @@ public class Elite : MonoBehaviour
         col = GetComponent<Collider2D>();
         anim = GetComponent<Animator>();
         sr = GetComponentInChildren<SpriteRenderer>();
+        if (sr != null) baseColor = sr.color;
+        currentHealth = maxHealth;
 
         rb.freezeRotation = true;
         rb.interpolation = RigidbodyInterpolation2D.Interpolate;
@@ -76,6 +109,8 @@ public class Elite : MonoBehaviour
     // Walk animation follows the REAL movement, so it can never walk while the Elite is stuck or stopped.
     private void Update()
     {
+        if (isDead) return;
+
         // Walk only if the script is moving it AND it really moves (ignores pushes from the player/other bodies)
         bool reallyWalking = isMoving && Mathf.Abs(rb.linearVelocity.x) > 0.1f;
         anim.SetFloat(SpeedHash, reallyWalking ? 1f : 0f);
@@ -84,7 +119,9 @@ public class Elite : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!FindPlayer())
+        if (isDead) return;
+
+        if (!FindPlayer() || (playerHealth != null && playerHealth.IsDead))
         {
             isPlayerInRange = false;
             Stop();
@@ -94,6 +131,13 @@ public class Elite : MonoBehaviour
         // Stand still until the attack animation is over
         if (isAttacking)
         {
+            // Deal damage once, at the hit moment of the attack animation
+            if (!damageDealt && Time.time >= hitTime)
+            {
+                damageDealt = true;
+                TryHitPlayer();
+            }
+
             if (Time.time >= attackEndTime) isAttacking = false;
             else { Stop(); return; }
         }
@@ -138,7 +182,9 @@ public class Elite : MonoBehaviour
         float duration = useFirst ? attack1Duration : attack2Duration;
 
         isAttacking = true;
+        damageDealt = false;
         attackEndTime = Time.time + duration;
+        hitTime = Time.time + duration * hitMoment;
         nextAttackTime = Time.time + Mathf.Max(attackCooldown, duration);
         anim.SetTrigger(useFirst ? Attack1Hash : Attack2Hash);
     }
@@ -181,6 +227,9 @@ public class Elite : MonoBehaviour
         GameObject p = GameObject.FindWithTag(playerTag);
         if (p == null) return false;
 
+        playerHealth = p.GetComponentInParent<PlayerMovement>();
+        if (playerHealth == null) playerHealth = p.GetComponentInChildren<PlayerMovement>();
+
         // Prefer a collider on the player GameObject itself; fall back to children.
         playerCol = p.GetComponent<Collider2D>();
         if (playerCol == null) playerCol = p.GetComponentInChildren<Collider2D>();
@@ -193,6 +242,80 @@ public class Elite : MonoBehaviour
 
         player = p.transform;
         return true;
+    }
+
+    // ---------------- Combat ----------------
+    private void TryHitPlayer()
+    {
+        if (playerHealth == null || player == null || playerCol == null) return;
+
+        float dx = playerCol.bounds.center.x - col.bounds.center.x;
+        float dy = Mathf.Abs(player.position.y - transform.position.y);
+        float gapX = Mathf.Max(0f, Mathf.Abs(dx) - (col.bounds.extents.x + playerCol.bounds.extents.x));
+
+        if (gapX <= attackRange + hitTolerance && dy <= maxHeightDifference)
+        {
+            playerHealth.TakeDamage(attackDamage);
+        }
+    }
+
+    public void TakeDamage(int amount)
+    {
+        if (isDead) return;
+
+        currentHealth -= amount;
+        if (sr != null) StartCoroutine(HitFlash());
+
+        if (currentHealth <= 0)
+        {
+            currentHealth = 0;
+            Die();
+        }
+    }
+
+    private IEnumerator HitFlash()
+    {
+        sr.color = hitFlashColor;
+        yield return new WaitForSeconds(0.12f);
+        if (!isDead) sr.color = baseColor;
+    }
+
+    private void Die()
+    {
+        isDead = true;
+        isAttacking = false;
+        isPlayerInRange = false;
+
+        // Drop the item where the Elite was standing
+        Vector3 dropPos = col.bounds.center;
+        dropPos.z = 0f;
+
+        Stop();
+        rb.linearVelocity = Vector2.zero;
+        rb.simulated = false;
+        col.enabled = false;
+        if (anim != null) anim.speed = 0f;
+
+        if (dropType != CollectibleType.None)
+        {
+            Collectible.Spawn(dropType, dropSprite, dropSize, dropPos, sr != null ? sr.sharedMaterial : null);
+        }
+
+        StartCoroutine(FadeAndDestroy());
+    }
+
+    private IEnumerator FadeAndDestroy()
+    {
+        float t = 0f;
+        while (t < deathFadeTime && sr != null)
+        {
+            t += Time.deltaTime;
+            Color c = hitFlashColor;
+            c.a = 1f - t / deathFadeTime;
+            sr.color = c;
+            yield return null;
+        }
+        Destroy(gameObject);
     }
 
     private void Stop()

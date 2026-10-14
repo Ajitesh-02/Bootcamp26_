@@ -10,11 +10,28 @@ public class LevelTrigger : MonoBehaviour
     [Tooltip("Enter the level number (1-6).")]
     public int levelNumber;
 
+    [Header("Lock (optional)")]
+    [Tooltip("Item the player must carry for this trigger to work, e.g. Crystal on a dungeon exit. None = always works.")]
+    public CollectibleType requiredItem = CollectibleType.None;
+    public string lockedMessage = "You need the Crystal to escape!";
+    private float nextMessageTime;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Ensure only the player triggers the scene load
         if (collision.CompareTag("Player"))
         {
+            // Exit locked until the required item is collected
+            if (!PlayerInventory.Has(requiredItem))
+            {
+                if (Time.time >= nextMessageTime)
+                {
+                    GameHUD.Instance.ShowMessage(lockedMessage);
+                    nextMessageTime = Time.time + 2.5f;
+                }
+                return;
+            }
+
             if (GameManager.Instance != null)
             {
                 // Levels 4, 5, and 6 complete Levels 1, 2, and 3
@@ -25,7 +42,7 @@ public class LevelTrigger : MonoBehaviour
                     // Load directly without progression restrictions
                     if (!string.IsNullOrEmpty(sceneToLoad))
                     {
-                        SceneManager.LoadScene(sceneToLoad);
+                        SceneFader.LoadScene(sceneToLoad);
                     }
                     else
                     {
@@ -39,6 +56,11 @@ public class LevelTrigger : MonoBehaviour
                         sceneToLoad, levelNumber
                     );
                 }
+            }
+            else if (levelNumber >= 4 && levelNumber <= 6 && !string.IsNullOrEmpty(sceneToLoad))
+            {
+                // Started this dungeon directly in the editor (no GameManager yet): still allow going back
+                SceneFader.LoadScene(sceneToLoad);
             }
             else
             {

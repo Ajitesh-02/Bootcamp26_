@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
         // If checks pass, load the scene
         if (!string.IsNullOrEmpty(sceneName))
         {
-            SceneManager.LoadScene(sceneName);
+            SceneFader.LoadScene(sceneName);
         }
         else
         {

@@ -81,7 +81,7 @@ public class MainMenu : MonoBehaviour
     // Scene Loading & Application Quit
     public void PlayGame()
     {
-        SceneManager.LoadSceneAsync("NandiniStartScene");
+        SceneFader.LoadScene("NandiniStartScene");
     }
 
     public void QuitGame()

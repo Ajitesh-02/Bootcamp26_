@@ -6,6 +6,9 @@ public class AirSlash : MonoBehaviour
     public float moveSpeed = 10f;
     public float lifeTime = 5f;
 
+    [Header("Combat")]
+    public int damage = 25;
+
     [Header("Impact Effects (Optional)")]
     public GameObject impactVFXPrefab; // Drag explosion/burst particle here if you have one
 
@@ -52,8 +55,15 @@ public class AirSlash : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Ignore collision with the Player
-        if (collision.CompareTag("Player")) return;
+        // Ignore collision with the Player and with invisible trigger zones (pickups, exits, ...)
+        if (collision.CompareTag("Player") || collision.isTrigger) return;
+
+        // Damage enemies
+        IDamageable target = collision.GetComponentInParent<IDamageable>();
+        if (target != null && !target.IsDead)
+        {
+            target.TakeDamage(damage);
+        }
 
         // Burst / Destroy sequence when colliding with any object/collider
         BurstAndDestroy();
