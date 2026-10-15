@@ -4,7 +4,8 @@ public enum CollectibleType
 {
     None = 0,
     Key = 1,
-    Crystal = 2
+    Crystal = 2,
+    Coin = 3
 }
 
 /// <summary>
@@ -17,6 +18,8 @@ public class Collectible : MonoBehaviour
     public float pickupDelay = 0.4f;   // can't be picked up instantly when it pops out
     public float bobHeight = 0.12f;
     public float bobSpeed = 3f;
+    public int coinValue = 0;          // only used by coins
+    public float magnetRadius = 1.6f;  // coins fly to the player inside this range
 
     private Vector3 basePos;
     private float spawnTime;
@@ -31,6 +34,7 @@ public class Collectible : MonoBehaviour
         {
             case CollectibleType.Key: return new Color(1f, 0.82f, 0.1f);      // gold
             case CollectibleType.Crystal: return new Color(0.3f, 0.9f, 1f);   // cyan
+            case CollectibleType.Coin: return Color.white;                    // coin sprite is already gold
             default: return Color.white;
         }
     }
@@ -42,7 +46,7 @@ public class Collectible : MonoBehaviour
 
         SpriteRenderer sr = go.AddComponent<SpriteRenderer>();
         bool placeholder = sprite == null;
-        sr.sprite = placeholder ? GameHUD.WhiteSprite : sprite;
+        sr.sprite = placeholder ? (type == CollectibleType.Coin ? GameHUD.CoinSprite : GameHUD.WhiteSprite) : sprite;
         sr.color = placeholder ? DefaultColor(type) : Color.white;
         sr.sortingOrder = 20;
         if (material != null) sr.sharedMaterial = material;
@@ -63,6 +67,25 @@ public class Collectible : MonoBehaviour
         return c;
     }
 
+    /// <summary>Drops 'total' coins as several small coins (each worth 'perCoin') around a point.</summary>
+    public static void SpawnCoins(int total, int perCoin, Vector3 position, Material material = null)
+    {
+        if (total <= 0) return;
+        perCoin = Mathf.Max(1, perCoin);
+        int count = Mathf.CeilToInt((float)total / perCoin);
+        int left = total;
+        for (int i = 0; i < count; i++)
+        {
+            float x = count == 1 ? 0f : Mathf.Lerp(-0.6f, 0.6f, (float)i / (count - 1));
+            Collectible c = Spawn(CollectibleType.Coin, null, 0.4f, position + new Vector3(x, 0.1f * (i % 2), 0f), material);
+            c.coinValue = Mathf.Min(perCoin, left);
+            c.bobSpeed = 4f + i * 0.4f;
+            left -= c.coinValue;
+        }
+    }
+
+    private Transform magnetTarget;
+
     private void Start()
     {
         basePos = transform.position;
@@ -71,6 +94,25 @@ public class Collectible : MonoBehaviour
 
     private void Update()
     {
+        // Coins drift towards a nearby player
+        if (type == CollectibleType.Coin && Time.time >= spawnTime + pickupDelay)
+        {
+            if (magnetTarget == null)
+            {
+                GameObject p = GameObject.FindWithTag("Player");
+                if (p != null) magnetTarget = p.transform;
+            }
+            if (magnetTarget != null)
+            {
+                Collider2D pc = magnetTarget.GetComponent<Collider2D>();
+                Vector3 target = pc != null ? pc.bounds.center : magnetTarget.position;
+                if (Vector2.Distance(basePos, target) < magnetRadius)
+                {
+                    basePos = Vector3.MoveTowards(basePos, target, 8f * Time.deltaTime);
+                }
+            }
+        }
+
         transform.position = basePos + Vector3.up * Mathf.Sin((Time.time - spawnTime) * bobSpeed) * bobHeight;
     }
 
@@ -83,6 +125,15 @@ public class Collectible : MonoBehaviour
         if (!PlayerInventory.IsPlayer(other)) return;
 
         collected = true;
+
+        if (type == CollectibleType.Coin)
+        {
+            PlayerProgress.AddCoins(coinValue);
+            HitFeedback.CoinDing();
+            Destroy(gameObject);
+            return;
+        }
+
         PlayerInventory.Add(type, iconSprite, iconTint);
 
         switch (type)

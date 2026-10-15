@@ -1,29 +1,191 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 /// <summary>
-/// On-screen HUD built entirely from code, so nothing has to be set up in the scene:
-///  - health bar + "current / max" text in the top-left corner
-///  - collected items (Key, Crystal) shown under the health bar
-///  - a short message line at the top-centre ("You got the KEY!", "Door is locked", ...)
-/// Created automatically the first time something uses GameHUD.Instance.
+/// The in-game HUD. Lives on the prefab Assets/Combat/Resources/UI/GameHUD.prefab
+/// (made by Tools > Bootcamp > Build UI) - edit its look in the Editor like any canvas.
+///  - health bar + "current / max" (top-left, always visible)
+///  - potion counter under it, collected items (Key, Crystal) next to that
+///  - coins (top-right)
+///  - message line (top-centre)
+/// It is spawned automatically in every scene except the main menu.
+/// If a scene already contains a GameHUD, that one is used instead.
 /// </summary>
 public class GameHUD : MonoBehaviour
 {
+    [Header("Health")]
+    public HealthBar healthBar;            // drives fill + "60 / 100" text
+
+    [Header("Coins")]
+    public TextMeshProUGUI coinText;
+    public RectTransform coinIcon;
+
+    [Header("Potions")]
+    public GameObject potionGroup;
+    public TextMeshProUGUI potionText;
+
+    [Header("Collected items")]
+    public RectTransform inventoryRow;
+    [Tooltip("Inactive child used as the template for Key / Crystal icons.")]
+    public GameObject inventoryItemTemplate;
+
+    [Header("Message")]
+    public CanvasGroup messageGroup;
+    public TextMeshProUGUI messageText;
+
+    [Header("Sprites")]
+    public Sprite coinSprite;              // also used for coin pickups in the world
+
+    /// <summary>Scenes where the HUD should NOT appear.</summary>
+    public static readonly string[] HiddenInScenes = { "Main Menu" };
+    public const string PrefabPath = "UI/GameHUD";
+
     private static GameHUD instance;
-    private static Sprite whiteSprite;
+    private static bool warned;
+    private static Sprite whiteSprite, generatedCoin;
+
+    private float messageHideTime;
+    private float coinPunch;
+    private int shownCoins = -1;
+
+    public HealthBar HealthBar => healthBar;
 
     public static GameHUD Instance
     {
         get
         {
-            if (instance == null) instance = Create();
+            if (instance != null) return instance;
+            instance = FindFirstObjectByType<GameHUD>();
+            if (instance != null) return instance;
+
+            GameObject prefab = Resources.Load<GameObject>(PrefabPath);
+            if (prefab != null)
+            {
+                instance = Instantiate(prefab).GetComponent<GameHUD>();
+                instance.name = "GameHUD";
+            }
+            else
+            {
+                if (!warned) Debug.LogError("GameHUD prefab missing. Run  Tools > Bootcamp > Build UI  in the Unity menu.");
+                warned = true;
+                instance = new GameObject("GameHUD (missing prefab)").AddComponent<GameHUD>();
+            }
             return instance;
         }
     }
 
-    /// <summary>1x1-unit white square, used for the bar fill and placeholder pickups.</summary>
+    // ---------- auto-spawn in gameplay scenes ----------
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+    private static void ResetStatics()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+        instance = null;
+        warned = false;
+    }
+
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+    private static void Hook()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private static void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (mode != LoadSceneMode.Single) return;
+        if (System.Array.IndexOf(HiddenInScenes, scene.name) >= 0) return;
+        Instance.Refresh();
+    }
+
+    private void Awake()
+    {
+        if (instance == null) instance = this;
+        if (messageGroup != null) messageGroup.alpha = 0f;
+        if (inventoryItemTemplate != null) inventoryItemTemplate.SetActive(false);
+        PlayerProgress.Changed += Refresh;
+    }
+
+    private void Start() { Refresh(); }
+
+    private void OnDestroy()
+    {
+        PlayerProgress.Changed -= Refresh;
+        if (instance == this) instance = null;
+    }
+
+    /// <summary>Re-reads health, coins and potions from PlayerProgress.</summary>
+    public void Refresh()
+    {
+        if (this == null) return;
+        if (healthBar != null) healthBar.UpdateHealthBar(PlayerProgress.Health, PlayerProgress.MaxHealth);
+
+        if (coinText != null)
+        {
+            if (shownCoins >= 0 && PlayerProgress.Coins > shownCoins) coinPunch = 1f;
+            shownCoins = PlayerProgress.Coins;
+            coinText.text = PlayerProgress.Coins.ToString();
+        }
+
+        if (potionText != null) potionText.text = "x " + PlayerProgress.Potions;
+        if (potionGroup != null) potionGroup.SetActive(PlayerProgress.Potions > 0 || PlayerProgress.GuideIntroDone);
+    }
+
+    /// <summary>Shows a message at the top of the screen for a few seconds.</summary>
+    public void ShowMessage(string text, float duration = 2.5f)
+    {
+        if (messageText == null || messageGroup == null) { Debug.Log("[HUD] " + text); return; }
+        messageText.text = text;
+        messageGroup.alpha = 1f;
+        messageHideTime = Time.unscaledTime + duration;
+    }
+
+    public void AddInventoryIcon(CollectibleType type, Sprite icon, Color tint)
+    {
+        if (inventoryItemTemplate == null || inventoryRow == null) return;
+        GameObject item = Instantiate(inventoryItemTemplate, inventoryRow);
+        item.name = type + "Item";
+        item.SetActive(true);
+
+        Image img = null;
+        foreach (Image i in item.GetComponentsInChildren<Image>(true))
+            if (i.gameObject != item) { img = i; break; }
+        if (img != null)
+        {
+            img.sprite = icon != null ? icon : WhiteSprite;
+            img.color = tint;
+            img.preserveAspect = true;
+        }
+        TextMeshProUGUI label = item.GetComponentInChildren<TextMeshProUGUI>(true);
+        if (label != null) label.text = type.ToString().ToUpper();
+    }
+
+    private void Update()
+    {
+        if (messageGroup != null && messageGroup.alpha > 0f && Time.unscaledTime >= messageHideTime)
+            messageGroup.alpha = Mathf.MoveTowards(messageGroup.alpha, 0f, Time.unscaledDeltaTime * 2f);
+
+        if (coinIcon != null)
+        {
+            coinPunch = Mathf.MoveTowards(coinPunch, 0f, Time.unscaledDeltaTime * 4f);
+            coinIcon.localScale = Vector3.one * (1f + 0.35f * coinPunch);
+        }
+    }
+
+    // ---------- sprites used by world pickups ----------
+    public static Sprite CoinSprite
+    {
+        get
+        {
+            GameHUD hud = Instance;
+            if (hud != null && hud.coinSprite != null) return hud.coinSprite;
+            if (generatedCoin == null) generatedCoin = MakeCircleSprite(new Color(1f, 0.8f, 0.15f));
+            return generatedCoin;
+        }
+    }
+
+    /// <summary>1x1-unit white square (placeholder pickups).</summary>
     public static Sprite WhiteSprite
     {
         get
@@ -31,157 +193,36 @@ public class GameHUD : MonoBehaviour
             if (whiteSprite == null)
             {
                 Texture2D tex = new Texture2D(4, 4);
-                Color[] pixels = new Color[16];
-                for (int i = 0; i < pixels.Length; i++) pixels[i] = Color.white;
-                tex.SetPixels(pixels);
+                Color[] px = new Color[16];
+                for (int i = 0; i < px.Length; i++) px[i] = Color.white;
+                tex.SetPixels(px);
                 tex.filterMode = FilterMode.Point;
                 tex.Apply();
                 whiteSprite = Sprite.Create(tex, new Rect(0, 0, 4, 4), new Vector2(0.5f, 0.5f), 4f);
-                whiteSprite.name = "HUD White";
             }
             return whiteSprite;
         }
     }
 
-    public HealthBar HealthBar { get; private set; }
-
-    private RectTransform inventoryRow;
-    private int inventoryCount;
-    private TextMeshProUGUI messageText;
-    private CanvasGroup messageGroup;
-    private float messageHideTime;
-
-    private static GameHUD Create()
+    private static Sprite MakeCircleSprite(Color c)
     {
-        GameObject root = new GameObject("GameHUD (auto)");
-        Canvas canvas = root.AddComponent<Canvas>();
-        canvas.renderMode = RenderMode.ScreenSpaceOverlay;
-        canvas.sortingOrder = -10; // stays behind the pause menu
-
-        CanvasScaler scaler = root.AddComponent<CanvasScaler>();
-        scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
-        scaler.referenceResolution = new Vector2(1920, 1080);
-        scaler.matchWidthOrHeight = 0.5f;
-
-        GameHUD hud = root.AddComponent<GameHUD>();
-        hud.Build(root.transform);
-        return hud;
+        const int S = 16;
+        Texture2D tex = new Texture2D(S, S, TextureFormat.RGBA32, false);
+        for (int y = 0; y < S; y++)
+            for (int x = 0; x < S; x++)
+                tex.SetPixel(x, y, Vector2.Distance(new Vector2(x, y), new Vector2(7.5f, 7.5f)) <= 7f ? c : Color.clear);
+        tex.filterMode = FilterMode.Point;
+        tex.Apply();
+        return Sprite.Create(tex, new Rect(0, 0, S, S), new Vector2(0.5f, 0.5f), S);
     }
 
-    private void Build(Transform root)
-    {
-        // ---------- Health bar (top-left) ----------
-        RectTransform barBg = NewImage("HealthBar", root, new Color(0f, 0f, 0f, 0.65f));
-        SetTopLeft(barBg, new Vector2(30, -30), new Vector2(380, 38));
-
-        RectTransform fillRt = NewImage("Fill", barBg, new Color(0.85f, 0.12f, 0.12f));
-        Stretch(fillRt, 4);
-        Image fill = fillRt.GetComponent<Image>();
-        fill.sprite = WhiteSprite;
-        fill.type = Image.Type.Filled;
-        fill.fillMethod = Image.FillMethod.Horizontal;
-        fill.fillOrigin = (int)Image.OriginHorizontal.Left;
-        fill.fillAmount = 1f;
-
-        TextMeshProUGUI hpText = NewText("HealthText", barBg, "100 / 100", 24, TextAlignmentOptions.Center);
-        Stretch(hpText.rectTransform, 0);
-
-        TextMeshProUGUI hpLabel = NewText("HPLabel", root, "HP", 26, TextAlignmentOptions.Left);
-        SetTopLeft(hpLabel.rectTransform, new Vector2(420, -30), new Vector2(80, 38));
-
-        HealthBar = barBg.gameObject.AddComponent<HealthBar>();
-        HealthBar.healthFillImage = fill;
-        HealthBar.healthText = hpText;
-
-        // ---------- Inventory row (under the bar) ----------
-        GameObject row = new GameObject("Inventory", typeof(RectTransform));
-        row.transform.SetParent(root, false);
-        inventoryRow = row.GetComponent<RectTransform>();
-        SetTopLeft(inventoryRow, new Vector2(30, -80), new Vector2(600, 80));
-
-        // ---------- Message line (top-centre) ----------
-        messageText = NewText("Message", root, "", 36, TextAlignmentOptions.Center);
-        RectTransform m = messageText.rectTransform;
-        m.anchorMin = m.anchorMax = new Vector2(0.5f, 1f);
-        m.pivot = new Vector2(0.5f, 1f);
-        m.anchoredPosition = new Vector2(0, -140);
-        m.sizeDelta = new Vector2(1400, 60);
-        messageText.fontStyle = FontStyles.Bold;
-        messageGroup = messageText.gameObject.AddComponent<CanvasGroup>();
-        messageGroup.alpha = 0f;
-    }
-
-    /// <summary>Shows a message at the top of the screen for a few seconds.</summary>
-    public void ShowMessage(string text, float duration = 2.5f)
-    {
-        messageText.text = text;
-        messageGroup.alpha = 1f;
-        messageHideTime = Time.time + duration;
-    }
-
-    public void AddInventoryIcon(CollectibleType type, Sprite icon, Color tint)
-    {
-        RectTransform slot = NewImage(type + "Icon", inventoryRow, tint);
-        Image img = slot.GetComponent<Image>();
-        img.sprite = icon != null ? icon : WhiteSprite;
-        img.preserveAspect = true;
-        SetTopLeft(slot, new Vector2(inventoryCount * 110, 0), new Vector2(48, 48));
-
-        TextMeshProUGUI label = NewText(type + "Label", inventoryRow, type.ToString(), 20, TextAlignmentOptions.Center);
-        SetTopLeft(label.rectTransform, new Vector2(inventoryCount * 110 - 26, -50), new Vector2(100, 26));
-
-        inventoryCount++;
-    }
-
-    private void Update()
-    {
-        if (messageGroup != null && messageGroup.alpha > 0f && Time.time >= messageHideTime)
-        {
-            messageGroup.alpha = Mathf.MoveTowards(messageGroup.alpha, 0f, Time.deltaTime * 2f);
-        }
-    }
-
-    private void OnDestroy()
-    {
-        if (instance == this) instance = null;
-    }
-
-    // ---------- small UI helpers ----------
-    private static RectTransform NewImage(string name, Transform parent, Color color)
-    {
-        GameObject go = new GameObject(name, typeof(RectTransform), typeof(Image));
-        go.transform.SetParent(parent, false);
-        go.GetComponent<Image>().color = color;
-        go.GetComponent<Image>().raycastTarget = false;
-        return go.GetComponent<RectTransform>();
-    }
-
+    /// <summary>Old helper kept for IntroMessage (no longer used in scenes).</summary>
     public static TextMeshProUGUI NewText(string name, Transform parent, string text, float size, TextAlignmentOptions align)
     {
         GameObject go = new GameObject(name, typeof(RectTransform));
         go.transform.SetParent(parent, false);
         TextMeshProUGUI t = go.AddComponent<TextMeshProUGUI>();
-        t.text = text;
-        t.fontSize = size;
-        t.alignment = align;
-        t.color = Color.white;
-        t.raycastTarget = false;
+        t.text = text; t.fontSize = size; t.alignment = align; t.raycastTarget = false;
         return t;
-    }
-
-    private static void SetTopLeft(RectTransform rt, Vector2 pos, Vector2 size)
-    {
-        rt.anchorMin = rt.anchorMax = new Vector2(0f, 1f);
-        rt.pivot = new Vector2(0f, 1f);
-        rt.anchoredPosition = pos;
-        rt.sizeDelta = size;
-    }
-
-    private static void Stretch(RectTransform rt, float inset)
-    {
-        rt.anchorMin = Vector2.zero;
-        rt.anchorMax = Vector2.one;
-        rt.offsetMin = new Vector2(inset, inset);
-        rt.offsetMax = new Vector2(-inset, -inset);
     }
 }

@@ -15,7 +15,30 @@ public static class HitFeedback
         CameraShake.Shake(shakeStrength, shakeTime);
     }
 
-    private static void PlaySound(AudioClip clip, float volume)
+    /// <summary>Short bright "ding" for picking up coins (generated in code).</summary>
+    public static void CoinDing()
+    {
+        if (generatedDing == null)
+        {
+            const int rate = 44100;
+            int n = (int)(rate * 0.18f);
+            float[] d = new float[n];
+            for (int i = 0; i < n; i++)
+            {
+                float t = (float)i / rate;
+                float f = t < 0.06f ? 1320f : 1760f;               // two quick notes
+                float env = Mathf.Exp(-t * 22f) * Mathf.Clamp01(t / 0.003f);
+                d[i] = Mathf.Sin(2f * Mathf.PI * f * t) * env * 0.5f;
+            }
+            generatedDing = AudioClip.Create("Coin (generated)", n, 1, rate, false);
+            generatedDing.SetData(d, 0);
+        }
+        PlaySound(generatedDing, 0.35f, false);
+    }
+
+    private static AudioClip generatedDing;
+
+    public static void PlaySound(AudioClip clip, float volume, bool randomPitch = true)
     {
         if (clip == null) return;
         if (source == null)
@@ -26,7 +49,7 @@ public static class HitFeedback
             source.playOnAwake = false;
             source.spatialBlend = 0f; // 2D
         }
-        source.pitch = Random.Range(0.92f, 1.08f); // slight variety each hit
+        source.pitch = randomPitch ? Random.Range(0.92f, 1.08f) : 1f; // slight variety each hit
         source.PlayOneShot(clip, volume);
     }
 

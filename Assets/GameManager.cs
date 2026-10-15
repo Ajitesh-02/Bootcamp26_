@@ -51,12 +51,14 @@ public class GameManager : MonoBehaviour
         if (targetLevel == 2 && !isLevel1Complete)
         {
             Debug.LogWarning("Level 2 is locked! You must complete Level 1 first.");
+            GameHUD.Instance.ShowMessage("Locked! Clear the Melee Dungeon first.");
             return;
         }
 
         if (targetLevel == 3 && (!isLevel1Complete || !isLevel2Complete))
         {
             Debug.LogWarning("Level 3 is locked! You must complete both Level 1 and Level 2 first.");
+            GameHUD.Instance.ShowMessage("Locked! Clear the Melee and Ranged Dungeons first.");
             return;
         }
 

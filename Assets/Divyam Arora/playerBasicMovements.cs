@@ -34,6 +34,14 @@ public class PlayerMovement : MonoBehaviour
     public float airSlashCooldown = 3f;
     private float lastAirSlashTime = -999f;
 
+    [Header("Potion (Q)")]
+    public int potionHealAmount = 40;
+
+    [Header("Lightning Bolt")]
+    public float lightningCooldown = 0.6f;
+    private float nextLightningTime;
+    private float nextLockedMessageTime;
+
     [Header("Melee Attack (H / U / K)")]
     public int attack0Damage = 15;          // H
     public int attack1Damage = 20;          // U
@@ -54,6 +62,7 @@ public class PlayerMovement : MonoBehaviour
     public float shakeDuration = 0.2f;
 
     [Header("Death")]
+    [Tooltip("On death, go back to the hub (Guide) after the delay.")]
     public bool reloadSceneOnDeath = true;
     public float reloadDelay = 2.5f;
 
@@ -74,8 +83,9 @@ public class PlayerMovement : MonoBehaviour
             healthBar = GameHUD.Instance.HealthBar;
         }
 
-        // Initialize health & update UI at game start
-        currentHealth = maxHealth;
+        // Health carries over between levels (PlayerProgress)
+        maxHealth = PlayerProgress.MaxHealth;
+        currentHealth = PlayerProgress.Health > 0 ? PlayerProgress.Health : maxHealth;
         if (healthBar != null)
         {
             healthBar.UpdateHealthBar(currentHealth, maxHealth);
@@ -84,8 +94,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        // Disable controls and movement if player is dead
-        if (isDead) return;
+        // Disable controls and movement if player is dead (or a level intro panel is open)
+        if (isDead || LevelIntro.IsOpen) return;
+
+        // Health potion (bought from the Guide)
+        if (Input.GetKeyDown(KeyCode.Q)) DrinkPotion();
 
         float horizontalInput = Input.GetAxisRaw("Horizontal");
 
@@ -113,20 +126,32 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.U)) MeleeAttack("attack1", attack1Damage);
         if (Input.GetKeyDown(KeyCode.K)) MeleeAttack("attack2", attack2Damage);
 
-        // Lightning Bolt Attack Input (C Key)
+        // Lightning Bolt Attack Input (C Key) - must be bought from the Guide first
         if (Input.GetKeyDown(KeyCode.C))
         {
-            if (anim != null)
+            if (!PlayerProgress.Has(Skill.LightningBolt))
             {
-                anim.SetTrigger("attack4");
+                LockedSkillMessage("Lightning Bolt");
             }
-            SpawnLightningBolt();
+            else if (Time.time >= nextLightningTime)
+            {
+                nextLightningTime = Time.time + lightningCooldown;
+                if (anim != null)
+                {
+                    anim.SetTrigger("attack4");
+                }
+                SpawnLightningBolt();
+            }
         }
 
-        // Air Slash Attack Input (J Key with 3-second Cooldown)
+        // Air Slash Attack Input (J Key with 3-second Cooldown) - must be bought from the Guide first
         if (Input.GetKeyDown(KeyCode.J))
         {
-            if (Time.time >= lastAirSlashTime + airSlashCooldown)
+            if (!PlayerProgress.Has(Skill.AirSlash))
+            {
+                LockedSkillMessage("Air Slash");
+            }
+            else if (Time.time >= lastAirSlashTime + airSlashCooldown)
             {
                 if (anim != null)
                 {
@@ -174,6 +199,8 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(InvincibilityRoutine());
         }
 
+        PlayerProgress.SetHealth(currentHealth); // remember for the next level
+
         // Update Health Bar UI
         if (healthBar != null)
         {
@@ -191,6 +218,8 @@ public class PlayerMovement : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
+
+        PlayerProgress.SetHealth(currentHealth); // remember for the next level
 
         // Update Health Bar UI
         if (healthBar != null)
@@ -212,7 +241,7 @@ public class PlayerMovement : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
         if (spriteRenderer != null) spriteRenderer.color = hitFlashColor;
 
-        GameHUD.Instance.ShowMessage("You died!", reloadDelay);
+        GameHUD.Instance.ShowMessage("You died! Returning to the Guide...", reloadDelay);
         if (reloadSceneOnDeath)
         {
             StartCoroutine(ReloadAfterDeath());
@@ -222,7 +251,47 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator ReloadAfterDeath()
     {
         yield return new WaitForSeconds(reloadDelay);
-        SceneFader.LoadScene(SceneManager.GetActiveScene().name);
+        // Back to the hub next to the Guide: full HP, coins and bought attacks kept
+        PlayerProgress.OnDeath();
+        SceneFader.LoadScene(PlayerProgress.HubScene);
+    }
+
+    private void DrinkPotion()
+    {
+        if (PlayerProgress.Potions <= 0)
+        {
+            GameHUD.Instance.ShowMessage("No potions left. Buy them from the Guide.");
+            return;
+        }
+        if (currentHealth >= maxHealth)
+        {
+            GameHUD.Instance.ShowMessage("You are already at full health.");
+            return;
+        }
+        PlayerProgress.UsePotion();
+        Heal(potionHealAmount);
+        GameHUD.Instance.ShowMessage("+" + potionHealAmount + " HP", 1.2f);
+        if (spriteRenderer != null) StartCoroutine(PotionGlow());
+    }
+
+    private IEnumerator PotionGlow()
+    {
+        Color baseCol = spriteRenderer.color;
+        float t = 0f;
+        while (t < 0.5f)
+        {
+            t += Time.deltaTime;
+            spriteRenderer.color = Color.Lerp(new Color(0.5f, 1f, 0.5f, baseCol.a), baseCol, t / 0.5f);
+            yield return null;
+        }
+        spriteRenderer.color = baseCol;
+    }
+
+    private void LockedSkillMessage(string skillName)
+    {
+        if (Time.time < nextLockedMessageTime) return;
+        nextLockedMessageTime = Time.time + 1.5f;
+        GameHUD.Instance.ShowMessage(skillName + " is locked. Buy it from the Guide with coins.");
     }
 
     // ---------------- Melee ----------------

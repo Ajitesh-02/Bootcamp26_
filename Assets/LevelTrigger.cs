@@ -16,6 +16,15 @@ public class LevelTrigger : MonoBehaviour
     public string lockedMessage = "You need the Crystal to escape!";
     private float nextMessageTime;
 
+    private void Awake()
+    {
+        // A level trigger must never be a solid wall - make sure its collider is a trigger
+        foreach (Collider2D c in GetComponents<Collider2D>())
+        {
+            c.isTrigger = true;
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Ensure only the player triggers the scene load

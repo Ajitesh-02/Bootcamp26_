@@ -54,6 +54,13 @@ public class Elite : MonoBehaviour, IDamageable
     [Tooltip("Size of the dropped item in world units (its biggest side).")]
     [SerializeField] private float dropSize = 0.8f;
 
+
+    [Header("Coins")]
+    [Tooltip("Total coins dropped on death (0 = none).")]
+    [SerializeField] private int coinsDropped = 25;
+    [Tooltip("Value of each coin piece, e.g. 25 total with 5 per coin = 5 coins.")]
+    [SerializeField] private int coinPieceValue = 5;
+
     private int currentHealth;
     private bool isDead;
     private bool damageDealt;
@@ -296,7 +303,9 @@ public class Elite : MonoBehaviour, IDamageable
         col.enabled = false;
         if (anim != null) anim.speed = 0f;
 
-        if (dropType != CollectibleType.None)
+        Collectible.SpawnCoins(coinsDropped, coinPieceValue, dropPos + Vector3.down * 0.3f, sr != null ? sr.sharedMaterial : null);
+
+        if (dropType != CollectibleType.None && dropType != CollectibleType.Coin)
         {
             Collectible.Spawn(dropType, dropSprite, dropSize, dropPos, sr != null ? sr.sharedMaterial : null);
         }

@@ -166,6 +166,17 @@ MonoBehaviour:
   attack2Duration: 0
   spriteFacesLeft: 0
   flipWhileWalking: 1
+  maxHealth: 150
+  hitFlashColor: {r: 1, g: 0.25, b: 0.25, a: 1}
+  deathFadeTime: 0.8
+  attackDamage: 8
+  hitMoment: 0.5
+  hitTolerance: 0.5
+  dropType: 1
+  dropSprite: {fileID: 0}
+  dropSize: 0.8
+  coinsDropped: 25
+  coinPieceValue: 5
   isPlayerInRange: 0
 --- !u!61 &4795323380484383961
 BoxCollider2D:

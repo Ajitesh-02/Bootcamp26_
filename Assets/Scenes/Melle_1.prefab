@@ -153,6 +153,14 @@ MonoBehaviour:
   attackCooldown: 1
   attackDuration: 0
   spriteFacesLeft: 0
+  maxHealth: 60
+  hitFlashColor: {r: 1, g: 0.25, b: 0.25, a: 1}
+  deathFadeTime: 0.6
+  attackDamage: 4
+  hitMoment: 0.5
+  hitTolerance: 0.5
+  coinsDropped: 10
+  coinPieceValue: 5
 --- !u!50 &5837293406958553205
 Rigidbody2D:
   serializedVersion: 5

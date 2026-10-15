@@ -229,8 +229,8 @@ Transform:
   m_GameObject: {fileID: 7552884807911057241}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.64, y: -0.14, z: 0}
-  m_LocalScale: {x: 4.2, y: 3.1, z: 3.339035}
+  m_LocalPosition: {x: -1.6349, y: -0.1503, z: 0}
+  m_LocalScale: {x: 4.24494, y: 3.1526997, z: 3.339035}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2869551411036212521}
@@ -358,8 +358,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.019918734, y: -0.015363837}
-  m_Size: {x: 0.34931946, y: 0.39282963}
+  m_Offset: {x: 0.0017408595, y: 0.007480254}
+  m_Size: {x: 0.20147243, y: 0.4246518}
   m_Direction: 0
 --- !u!114 &6142685021128879651
 MonoBehaviour:
@@ -385,6 +385,23 @@ MonoBehaviour:
   airSlashPrefab: {fileID: 4253934603313557797, guid: 891ba236a353b6c4bbc83cde7523a7bd, type: 3}
   airSlashAttackPoint: {fileID: 7507132364164977356}
   airSlashCooldown: 3
+  potionHealAmount: 40
+  lightningCooldown: 0.6
+  attack0Damage: 15
+  attack1Damage: 20
+  attack2Damage: 30
+  meleeReach: 0.8
+  meleeRadius: 0.9
+  meleeHitDelay: 0.15
+  meleeCooldown: 0.35
+  hitFlashColor: {r: 1, g: 0.15, b: 0.15, a: 1}
+  hitFlashInterval: 0.1
+  hurtSound: {fileID: 0}
+  hurtVolume: 0.6
+  shakeStrength: 0.18
+  shakeDuration: 0.2
+  reloadSceneOnDeath: 1
+  reloadDelay: 2.5
 --- !u!95 &1136851663138257439
 Animator:
   serializedVersion: 7

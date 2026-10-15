@@ -42,6 +42,13 @@ public class EnemyAi : MonoBehaviour, IDamageable
     [Tooltip("Extra reach on top of Attack Range, so a player stepping back slightly still gets hit.")]
     [SerializeField] private float hitTolerance = 0.5f;
 
+
+    [Header("Coins")]
+    [Tooltip("Total coins dropped on death (0 = none).")]
+    [SerializeField] private int coinsDropped = 10;
+    [Tooltip("Value of each coin piece, e.g. 25 total with 5 per coin = 5 coins.")]
+    [SerializeField] private int coinPieceValue = 5;
+
     private int currentHealth;
     private bool isDead;
     private bool damageDealt;
@@ -228,6 +235,11 @@ public class EnemyAi : MonoBehaviour, IDamageable
         rb.simulated = false;
         col.enabled = false;
         if (anim != null) anim.speed = 0f;
+
+        // (collider is already disabled here, so use the sprite bounds)
+        Vector3 coinPos = sr != null ? sr.bounds.center : transform.position; coinPos.z = 0f;
+        Collectible.SpawnCoins(coinsDropped, coinPieceValue, coinPos, sr != null ? sr.sharedMaterial : null);
+
         StartCoroutine(FadeAndDestroy());
     }
 

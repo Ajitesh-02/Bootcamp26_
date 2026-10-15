@@ -5,6 +5,7 @@ public class MobProjectile : MonoBehaviour
 {
     [SerializeField] private float speed = 8f;
     [SerializeField] private float lifetime = 4f;
+    [SerializeField] private int damage = 10;
     [SerializeField] private LayerMask groundLayer;
 
     private Rigidbody2D rb;
@@ -35,14 +36,15 @@ public class MobProjectile : MonoBehaviour
         if (hasHit) return;
 
         bool isPlayer = other.CompareTag("Player") || other.transform.root.CompareTag("Player");
-        bool isGround = (groundLayer.value & (1 << other.gameObject.layer)) != 0;
-
-        // Diagnostic: shows exactly what the projectile touched
-        Debug.Log($"Projectile touched '{other.name}' | layer: {LayerMask.LayerToName(other.gameObject.layer)} | player: {isPlayer} | ground: {isGround}");
+        bool isGround = (groundLayer.value & (1 << other.gameObject.layer)) != 0 || other.CompareTag("Ground");
 
         if (isPlayer || isGround)
         {
-            if (isPlayer) Debug.Log("Player hit");   // replace with your damage call
+            if (isPlayer)
+            {
+                PlayerMovement pm = other.GetComponentInParent<PlayerMovement>();
+                if (pm != null) pm.TakeDamage(damage);
+            }
             Vanish();
         }
     }

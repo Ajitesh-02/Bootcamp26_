@@ -49,7 +49,8 @@ public class LightningBolt : MonoBehaviour
         if (hasHit) return;
 
         // Ignore environment or player collisions
-        if (other.CompareTag("Ground") || other.CompareTag("Spikes") || other.CompareTag("Player"))
+        // (tag compared as a string: the "Spikes" tag doesn't exist in this project and CompareTag would log an error)
+        if (other.CompareTag("Ground") || other.gameObject.tag == "Spikes" || other.CompareTag("Player"))
         {
             return;
         }
