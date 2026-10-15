@@ -11,12 +11,27 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject optionsPanel;
     [SerializeField] private GameObject instructionsPanel;
 
-    private bool isMuted = true; // Set default variable state to true
+    private bool isMuted = false;
+
+    public const string MutePrefKey = "IsMuted";
+
+    /// <summary>Applies the saved mute setting as soon as the game starts, in ANY scene.</summary>
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+    private static void ApplySavedMuteOnStartup()
+    {
+        // Audio is always on (mute buttons removed)
+        PlayerPrefs.DeleteKey(MutePrefKey);
+        AudioListener.pause = false;
+        AudioListener.volume = 1f;
+    }
 
     private void Start()
     {
-        // Default to 1 (MUTED) on first run
-        isMuted = PlayerPrefs.GetInt("IsMuted", 1) == 1;
+        // Sound is ON the first time the game runs; afterwards the player's choice is remembered
+        isMuted = false;   // audio always on
+
+        // Buttons not assigned in the Inspector? find them by name ("mute" / "unmute")
+        if (muteButton == null || unmuteButton == null) FindAudioButtons();
 
         // Apply initial state (muted at start)
         ApplyAudioState();
@@ -29,29 +44,32 @@ public class MainMenu : MonoBehaviour
     // Call this when clicking either audio button
     public void ToggleMute()
     {
-        isMuted = !isMuted;
-
-        // Save the updated state
-        PlayerPrefs.SetInt("IsMuted", isMuted ? 1 : 0);
-        PlayerPrefs.Save();
-
+        // Mute was removed - audio always stays on. Kept so old button links don't break.
         ApplyAudioState();
     }
 
     private void ApplyAudioState()
     {
-        // Control global Unity audio
-        AudioListener.pause = isMuted;
+        // Mute = global volume 0. (AudioListener.pause is NOT used: it freezes every sound in the
+        // game and sounds started while paused never play.)
+        AudioListener.pause = false;
         AudioListener.volume = isMuted ? 0f : 1f;
 
-        // Toggle UI button visibility
-        if (muteButton != null && unmuteButton != null)
-        {
-            // When MUTED: show the Unmute button so the player can turn sound back ON
-            unmuteButton.SetActive(isMuted);
+        // Mute / unmute buttons are removed from the menu: keep them hidden
+        if (muteButton != null) muteButton.SetActive(false);
+        if (unmuteButton != null) unmuteButton.SetActive(false);
+    }
 
-            // When NOT muted: show the Mute button so the player can turn sound OFF
-            muteButton.SetActive(!isMuted);
+    private void FindAudioButtons()
+    {
+        foreach (Canvas c in FindObjectsByType<Canvas>(FindObjectsInactive.Include, FindObjectsSortMode.None))
+        {
+            foreach (Transform t in c.GetComponentsInChildren<Transform>(true))
+            {
+                string n = t.name.ToLower();
+                if (muteButton == null && n == "mute") muteButton = t.gameObject;
+                if (unmuteButton == null && n == "unmute") unmuteButton = t.gameObject;
+            }
         }
     }
 

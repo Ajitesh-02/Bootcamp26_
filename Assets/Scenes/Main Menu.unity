@@ -225,8 +225,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42f53653dc0ff0a45b7600fdd95b8b97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  muteButton: {fileID: 0}
-  unmuteButton: {fileID: 0}
+  muteButton: {fileID: 1123006402}
+  unmuteButton: {fileID: 1627276662}
   optionsPanel: {fileID: 0}
   instructionsPanel: {fileID: 0}
 --- !u!114 &213010246
@@ -1836,7 +1836,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7868638176265845263, guid: f5dc04364117ed94597e74e1c3c5769c, type: 3}
+  m_Sprite: {fileID: 972866906942965959, guid: 75e9e8c9f85c24840849bb142a77fd83, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1884,8 +1884,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78c49424830544e4fae0dc34802eb7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BackgroundMusic
-  audioSource: {fileID: 0}
-  musicClip: {fileID: 0}
+  audioSource: {fileID: 1321791947}
+  musicClip: {fileID: 8300000, guid: 7163fde0e9bc6b04eb36cb4415a0ed79, type: 3}
 --- !u!82 &1321791947
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2830,7 +2830,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1627276663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2931,7 +2931,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 972866906942965959, guid: 75e9e8c9f85c24840849bb142a77fd83, type: 3}
+  m_Sprite: {fileID: -7868638176265845263, guid: f5dc04364117ed94597e74e1c3c5769c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3154,7 +3154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
