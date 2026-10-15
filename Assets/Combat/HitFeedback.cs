@@ -9,8 +9,27 @@ public static class HitFeedback
     private static AudioClip generatedGrunt;
     private static AudioSource source;
 
+    private static AudioClip[] hurtClips;
+
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+    private static void ResetStatics() { hurtClips = null; }
+
+    /// <summary>Hurt sounds in Assets/Combat/Resources/Sfx (player_hurt_1, _2, _3 ...). Empty = use the generated grunt.</summary>
+    private static AudioClip RandomHurtClip()
+    {
+        if (hurtClips == null)
+        {
+            System.Collections.Generic.List<AudioClip> list = new System.Collections.Generic.List<AudioClip>();
+            foreach (AudioClip c in Resources.LoadAll<AudioClip>("Sfx"))
+                if (c.name.StartsWith("player_hurt")) list.Add(c);
+            hurtClips = list.ToArray();
+        }
+        return hurtClips.Length > 0 ? hurtClips[Random.Range(0, hurtClips.Length)] : null;
+    }
+
     public static void PlayerHit(AudioClip clip, float volume, float shakeStrength, float shakeTime)
     {
+        if (clip == null) clip = RandomHurtClip();
         PlaySound(clip != null ? clip : Grunt(), volume);
         CameraShake.Shake(shakeStrength, shakeTime);
     }

@@ -9,7 +9,7 @@ using UnityEngine.UI;
 using TMPro;
 
 /// <summary>
-/// Tools > Bootcamp > Build UI
+/// Tools > Bootcamp > Build UI   (safe to run again: only adds what is missing + keeps the default font)
 /// Creates the game's UI as real, editable assets:
 ///   Assets/Combat/Resources/UI/GameHUD.prefab     (health, potions, items, coins, messages)
 ///   Assets/Combat/Resources/UI/GuideUI.prefab     ([E] prompt, dialogue box, shop)
@@ -51,22 +51,27 @@ public static class BootcampUIBuilder
     private static void Build(bool overwrite)
     {
         ImportArt();
-        bodyFont = MakeFont("PixelifySans", out bodyOutline);
-        titleFont = MakeFont("Silkscreen-Regular", out titleOutline);
-        if (bodyFont == null || titleFont == null)
+        bodyFont = titleFont = TMP_Settings.defaultFontAsset;   // Unity's default TextMeshPro font (LiberationSans SDF)
+        if (bodyFont == null)
         {
-            EditorUtility.DisplayDialog("Bootcamp UI", "Could not create the font assets. Check the Console.", "OK");
+            EditorUtility.DisplayDialog("Bootcamp UI", "No default TextMeshPro font found. Import TMP Essential Resources first (Window > TextMeshPro).", "OK");
             return;
         }
+        bodyOutline = titleOutline = MakeOutlineMaterial(bodyFont);
 
         Directory.CreateDirectory(PrefabDir);
         List<string> made = new List<string>();
         if (MakePrefab("GameHUD", BuildHUD, overwrite)) made.Add("GameHUD");
         if (MakePrefab("GuideUI", BuildGuideUI, overwrite)) made.Add("GuideUI");
         if (MakePrefab("LevelIntro", BuildLevelIntro, overwrite)) made.Add("LevelIntro");
+        int swapped = UseDefaultFontInPrefabs();
         AssetDatabase.SaveAssets();
 
-        string scene = PlaceIntroInMelee() ? "\nAdded the Melee instructions panel to MelleDungeon." : "";
+        string scene = "";
+        if (PlaceIntro(MeleeScene, "LevelIntro (Melee)", MeleeTitle, MeleeBody)) scene += "\nAdded the instructions panel to MelleDungeon.";
+        if (PlaceIntro(RangedScene, "LevelIntro (Ranged)", RangedTitle, RangedBody)) scene += "\nAdded the instructions panel to rangeddungeon.";
+        if (PlaceIntro(TrapScene, "LevelIntro (Trap)", TrapTitle, TrapBody)) scene += "\nAdded the instructions panel to TrapDungeon.";
+        if (swapped > 0) scene += "\nSwitched " + swapped + " texts to the default font.";
         EditorUtility.DisplayDialog("Bootcamp UI",
             (made.Count > 0 ? "Created: " + string.Join(", ", made) : "Prefabs already existed (nothing overwritten).") + scene +
             "\n\nPrefabs are in Assets/Combat/Resources/UI. Open them to change the look.", "OK");
@@ -108,41 +113,47 @@ public static class BootcampUIBuilder
 
     private static Sprite LoadSprite(string n) { return AssetDatabase.LoadAssetAtPath<Sprite>(ArtDir + n + ".png"); }
 
-    private static TMP_FontAsset MakeFont(string fileName, out Material outlineMat)
+    /// <summary>Outlined variant of a font's material (for text drawn over the game).</summary>
+    private static Material MakeOutlineMaterial(TMP_FontAsset fa)
     {
-        string assetPath = FontDir + fileName + " SDF.asset";
-        string outlinePath = FontDir + fileName + " SDF Outline.mat";
-        TMP_FontAsset fa = AssetDatabase.LoadAssetAtPath<TMP_FontAsset>(assetPath);
+        string path = FontDir + fa.name + " Outline.mat";
+        Material m = AssetDatabase.LoadAssetAtPath<Material>(path);
+        if (m != null) return m;
+        Directory.CreateDirectory(FontDir);
+        m = new Material(fa.material) { name = fa.name + " Outline" };
+        m.EnableKeyword("OUTLINE_ON");
+        m.SetFloat(ShaderUtilities.ID_OutlineWidth, 0.2f);
+        m.SetColor(ShaderUtilities.ID_OutlineColor, Color.black);
+        AssetDatabase.CreateAsset(m, path);
+        return m;
+    }
 
-        if (fa == null)
+    /// <summary>
+    /// Any text in the UI prefabs that still uses another font (e.g. the earlier pixel fonts)
+    /// is switched to the default font. Everything else you edited is kept.
+    /// </summary>
+    private static int UseDefaultFontInPrefabs()
+    {
+        int count = 0;
+        foreach (string n in new[] { "GameHUD", "GuideUI", "LevelIntro" })
         {
-            Font font = AssetDatabase.LoadAssetAtPath<Font>(FontDir + fileName + ".ttf");
-            if (font == null) { Debug.LogError("Font not found: " + FontDir + fileName + ".ttf"); outlineMat = null; return null; }
-
-            fa = TMP_FontAsset.CreateFontAsset(font, 64, 6, GlyphRenderMode.SDFAA, 1024, 1024, AtlasPopulationMode.Dynamic, true);
-            fa.name = fileName + " SDF";
-            AssetDatabase.CreateAsset(fa, assetPath);
-            fa.atlasTextures[0].name = fileName + " Atlas";
-            AssetDatabase.AddObjectToAsset(fa.atlasTextures[0], fa);
-            fa.material.name = fileName + " Material";
-            AssetDatabase.AddObjectToAsset(fa.material, fa);
-            if (TMP_Settings.defaultFontAsset != null)
-                fa.fallbackFontAssetTable = new List<TMP_FontAsset> { TMP_Settings.defaultFontAsset };
-            EditorUtility.SetDirty(fa);
-            AssetDatabase.SaveAssets();
+            string path = PrefabDir + "/" + n + ".prefab";
+            if (AssetDatabase.LoadAssetAtPath<GameObject>(path) == null) continue;
+            GameObject root = PrefabUtility.LoadPrefabContents(path);
+            int changed = 0;
+            foreach (TextMeshProUGUI t in root.GetComponentsInChildren<TextMeshProUGUI>(true))
+            {
+                if (t.font == bodyFont) continue;
+                bool hadOutline = t.fontSharedMaterial != null && t.fontSharedMaterial.name.Contains("Outline");
+                t.font = bodyFont;
+                t.fontSharedMaterial = hadOutline ? bodyOutline : bodyFont.material;
+                changed++;
+            }
+            if (changed > 0) PrefabUtility.SaveAsPrefabAsset(root, path);
+            PrefabUtility.UnloadPrefabContents(root);
+            count += changed;
         }
-
-        outlineMat = AssetDatabase.LoadAssetAtPath<Material>(outlinePath);
-        if (outlineMat == null)
-        {
-            outlineMat = new Material(fa.material) { name = fileName + " SDF Outline" };
-            outlineMat.EnableKeyword("OUTLINE_ON");
-            outlineMat.SetFloat(ShaderUtilities.ID_OutlineWidth, 0.22f);
-            outlineMat.SetColor(ShaderUtilities.ID_OutlineColor, Color.black);
-            outlineMat.SetFloat(ShaderUtilities.ID_FaceDilate, 0.1f);
-            AssetDatabase.CreateAsset(outlineMat, outlinePath);
-        }
-        return fa;
+        return count;
     }
 
     // =====================================================================
@@ -437,17 +448,37 @@ public static class BootcampUIBuilder
         "Defeat an <color=#F2C95C>Elite</color> to win the <color=#FFD54A>KEY</color> to the door, " +
         "then the other Elite for the <color=#4DE6FF>CRYSTAL</color> that lets you escape.";
 
-    private static bool PlaceIntroInMelee()
+    private const string RangedScene = "Assets/Scenes/rangeddungeon.unity";
+    private const string TrapScene = "Assets/Scenes/TrapDungeon.unity";
+
+    private const string RangedTitle = "THE RANGED DUNGEON";
+    private const string RangedBody =
+        "Ghosts and crabs attack from a distance. Close in fast, or answer with your own powers.\n\n" +
+        "<color=#F2C95C>A / D</color>  move      <color=#F2C95C>Space</color>  jump      <color=#F2C95C>H / U / K</color>  strike\n" +
+        "<color=#F2C95C>J</color>  Air Slash      <color=#F2C95C>C</color>  Lightning   <color=#B9AC96>(once learned from the Guide)</color>\n" +
+        "<color=#F2C95C>Q</color>  drink a health potion\n\n" +
+        "One of the crabs carries the <color=#4DE6FF>CRYSTAL</color>. The exit will not open without it.";
+
+    private const string TrapTitle = "THE TRAP DUNGEON";
+    private const string TrapBody =
+        "No guards here. The dungeon itself is the enemy - watch the floor, the walls and the ceiling.\n\n" +
+        "<color=#F2C95C>A / D</color>  move      <color=#F2C95C>Space</color>  jump\n" +
+        "<color=#F2C95C>B</color>  grab a chain      <color=#F2C95C>Up / Down</color>  climb      <color=#F2C95C>Space</color>  jump off the top\n\n" +
+        "Hidden plates fire arrows, platforms fall and boulders roll. Keep moving.\n" +
+        "Grab the <color=#7CFC7C>CRYSTAL</color> just before the exit - the way out will not open without it.";
+
+    /// <summary>Adds a LevelIntro panel with this text to a scene (skipped if the scene already has one).</summary>
+    private static bool PlaceIntro(string scenePath, string objectName, string title, string body)
     {
         GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>(PrefabDir + "/LevelIntro.prefab");
-        if (prefab == null || !File.Exists(MeleeScene)) return false;
+        if (prefab == null || !File.Exists(scenePath)) return false;
 
-        Scene sc = SceneManager.GetSceneByPath(MeleeScene);
+        Scene sc = SceneManager.GetSceneByPath(scenePath);
         bool wasOpen = sc.IsValid() && sc.isLoaded;
         if (!wasOpen)
         {
             if (!EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo()) return false;
-            sc = EditorSceneManager.OpenScene(MeleeScene, OpenSceneMode.Additive);
+            sc = EditorSceneManager.OpenScene(scenePath, OpenSceneMode.Additive);
         }
 
         foreach (GameObject go in sc.GetRootGameObjects())
@@ -458,10 +489,10 @@ public static class BootcampUIBuilder
             }
 
         GameObject inst = (GameObject)PrefabUtility.InstantiatePrefab(prefab, sc);
-        inst.name = "LevelIntro (Melee)";
+        inst.name = objectName;
         LevelIntro li = inst.GetComponent<LevelIntro>();
-        li.titleText.text = MeleeTitle;
-        li.bodyText.text = MeleeBody;
+        li.titleText.text = title;
+        li.bodyText.text = body;
         PrefabUtility.RecordPrefabInstancePropertyModifications(li.titleText);
         PrefabUtility.RecordPrefabInstancePropertyModifications(li.bodyText);
         EditorSceneManager.MarkSceneDirty(sc);

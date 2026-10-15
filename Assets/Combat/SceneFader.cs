@@ -105,6 +105,11 @@ public class SceneFader : MonoBehaviour
     /// <summary>Fade out, load the scene by name, fade back in.</summary>
     public static void LoadScene(string sceneName)
     {
+        if (!Application.CanStreamedLevelBeLoaded(sceneName))
+        {
+            Debug.LogError("SceneFader: scene '" + sceneName + "' can't be loaded. Is it added to File > Build Profiles (Scene List)?");
+            return;
+        }
         if (instance == null) Bootstrap();
         instance.StartLoad(() => SceneManager.LoadScene(sceneName));
     }
@@ -130,6 +135,10 @@ public class SceneFader : MonoBehaviour
         Time.timeScale = 1f; // in case we leave from the pause menu
         yield return FadeTo(1f, fadeOutTime);
         load();
+
+        // If the load failed for any reason, don't stay stuck on black
+        yield return new WaitForSecondsRealtime(3f);
+        isLoading = false;
     }
 
     private IEnumerator FadeTo(float target, float time)

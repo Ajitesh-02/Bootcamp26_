@@ -34,6 +34,10 @@ public class PlayerMovement : MonoBehaviour
     public float airSlashCooldown = 3f;
     private float lastAirSlashTime = -999f;
 
+    [Header("Restart (R)")]
+    [Tooltip("Press R to restart the current level (useful if you get trapped).")]
+    public bool allowRestartKey = true;
+
     [Header("Potion (Q)")]
     public int potionHealAmount = 40;
 
@@ -117,6 +121,13 @@ public class PlayerMovement : MonoBehaviour
 
         // Health potion (bought from the Guide)
         if (Input.GetKeyDown(KeyCode.Q)) DrinkPotion();
+
+        // Stuck (e.g. trapped by a falling box)? R restarts this level. Health/coins/skills are kept.
+        if (allowRestartKey && Input.GetKeyDown(KeyCode.R))
+        {
+            SceneFader.LoadScene(SceneManager.GetActiveScene().name);
+            return;
+        }
 
         // Chain climbing takes over movement while on a chain
         if (climbState == ClimbState.Climbing) { Climb(); return; }
