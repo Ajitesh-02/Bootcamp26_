@@ -1450,7 +1450,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7791720573792258895, guid: f4569fca0a69e36458f37617f8afcb87, type: 3}
       propertyPath: dropsCrystal
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5486,6 +5486,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1601980302438858461, guid: 5eb05aaf441dcda49bc87b61fe8c0e1e, type: 3}
+      propertyPath: dropsCrystal
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3258470166388380633, guid: 5eb05aaf441dcda49bc87b61fe8c0e1e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 76.33126
@@ -9235,7 +9239,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6142685021128879651, guid: 4b32ed06c640da24fa586c0cb505bef3, type: 3}
       propertyPath: jumpspeed
-      value: 10
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7552884807911057241, guid: 4b32ed06c640da24fa586c0cb505bef3, type: 3}
       propertyPath: m_Name

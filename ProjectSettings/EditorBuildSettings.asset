@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TrapDungeon.unity
     guid: 442031e259d2c4b35844a8487623ab96
+  - enabled: 1
+    path: Assets/Scenes/CoordiScene.unity
+    guid: e5555f6e293f5214281778815d8b9fee
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

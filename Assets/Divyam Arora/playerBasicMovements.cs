@@ -68,6 +68,23 @@ public class PlayerMovement : MonoBehaviour
 
     private Collider2D bodyCollider;
 
+    [Header("Chain Climbing (B to grab, Up/Down or W/S to climb, Space at the top to jump off)")]
+    public float climbSpeed = 1.5f;
+    public float climbJumpCooldown = 0.5f;   // can't jump again right after leaving a chain
+
+    private enum ClimbState { Normal, Climbing, AtTop }
+    private ClimbState climbState = ClimbState.Normal;
+    private ChainClimbZone currentZone;
+    private ChainClimbZone blockedZone;
+    private readonly Dictionary<ChainClimbZone, int> zoneTouches = new Dictionary<ChainClimbZone, int>();
+    private ChainClimbZone nearbyZone;
+    private Collider2D nearbyZoneCol;
+    private float originalGravity = 1f;
+    private float climbStartY;
+    private float climbX;
+    private float jumpLockUntil;
+
+    public bool IsClimbing => climbState != ClimbState.Normal;
     public bool IsDead => isDead;
 
     void Start()
@@ -76,6 +93,7 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         bodyCollider = GetComponent<Collider2D>();
+        if (rb != null) originalGravity = rb.gravityScale;
 
         // No health bar assigned in the Inspector -> use the auto HUD (top-left corner)
         if (healthBar == null)
@@ -100,6 +118,17 @@ public class PlayerMovement : MonoBehaviour
         // Health potion (bought from the Guide)
         if (Input.GetKeyDown(KeyCode.Q)) DrinkPotion();
 
+        // Chain climbing takes over movement while on a chain
+        if (climbState == ClimbState.Climbing) { Climb(); return; }
+        if (climbState == ClimbState.AtTop) { AtTop(); return; }
+
+        // Grab a chain (B) when standing next to one
+        if (Input.GetKeyDown(KeyCode.B) && nearbyZone != null && nearbyZone != blockedZone)
+        {
+            StartClimbing(nearbyZone, nearbyZoneCol);
+            if (climbState != ClimbState.Normal) return;
+        }
+
         float horizontalInput = Input.GetAxisRaw("Horizontal");
 
         // Horizontal Movement & Sprite Flip
@@ -115,10 +144,12 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Jump Input
-        if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
+        if (Input.GetKeyDown(KeyCode.Space) && isOnGround && Time.time >= jumpLockUntil)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpspeed);
             isOnGround = false;
+            groundContacts.Clear();
+            jumpLockUntil = Time.time + 0.15f;   // no instant re-jump while still touching the floor
         }
 
         // Basic Attack Inputs
@@ -406,12 +437,164 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    // ---------------- Chain climbing (same behaviour as the Trap level's DemoMovement) ----------------
+    private void Climb()
+    {
+        SetClimbAnim();
+
+        float moveY = 0f;
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
+            moveY = climbSpeed;
+        else if ((Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) && transform.position.y > climbStartY)
+            moveY = -climbSpeed;
+
+        Vector3 p = transform.position;
+        p.x = climbX;
+        p.y += moveY * Time.deltaTime;
+
+        float topY = currentZone.anchorTop.position.y;
+        if (p.y >= topY)
+        {
+            p.y = topY;
+            transform.position = p;
+            climbState = ClimbState.AtTop;
+            return;
+        }
+        transform.position = p;
+    }
+
+    private void AtTop()
+    {
+        SetClimbAnim();
+
+        Vector3 p = transform.position;
+        p.x = climbX;
+        p.y = currentZone.anchorTop.position.y;
+        transform.position = p;
+
+        if (Input.GetKeyDown(KeyCode.Space))
+            JumpOffTop();
+        else if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
+            climbState = ClimbState.Climbing;
+    }
+
+    private void JumpOffTop()
+    {
+        climbState = ClimbState.Normal;
+        rb.bodyType = RigidbodyType2D.Dynamic;
+        rb.gravityScale = originalGravity;
+
+        float dir = currentZone.grabFromLeft ? 1f : -1f;
+        rb.linearVelocity = new Vector2(dir * currentZone.topJumpX, currentZone.topJumpY);
+        if (spriteRenderer != null) spriteRenderer.flipX = dir < 0f;
+        groundContacts.Clear();
+        isOnGround = false;
+        jumpLockUntil = Time.time + climbJumpCooldown;
+
+        if (GetZoneTouches(currentZone) == 0) blockedZone = null;
+    }
+
+    private void StartClimbing(ChainClimbZone zone, Collider2D chainCol)
+    {
+        if (zone == null || zone.anchorTop == null || chainCol == null) return;
+
+        float chainX = chainCol.bounds.center.x;
+        bool onCorrectSide = zone.grabFromLeft ? transform.position.x < chainX : transform.position.x > chainX;
+        if (!onCorrectSide) return;
+
+        currentZone = zone;
+        blockedZone = zone;
+        climbState = ClimbState.Climbing;
+        groundContacts.Clear();
+        isOnGround = false;
+        rb.linearVelocity = Vector2.zero;
+        rb.gravityScale = 0f;
+        rb.bodyType = RigidbodyType2D.Kinematic;
+        climbStartY = transform.position.y;
+        climbX = zone.anchorTop.position.x + (zone.grabFromLeft ? -zone.sideOffset : zone.sideOffset);
+        if (spriteRenderer != null) spriteRenderer.flipX = !zone.grabFromLeft;   // face the chain
+    }
+
+    private void SetClimbAnim()
+    {
+        if (anim == null) return;
+        anim.SetBool("isRunning", false);
+        anim.SetBool("isGrounded", false);
+        anim.SetFloat("yVelocity", 0f);
+    }
+
+    private int GetZoneTouches(ChainClimbZone zone)
+    {
+        return zoneTouches.TryGetValue(zone, out int n) ? n : 0;
+    }
+
+    private void ZoneEnter(Collider2D col)
+    {
+        ChainClimbZone zone = col.GetComponentInParent<ChainClimbZone>();
+        if (zone == null) return;
+        zoneTouches[zone] = GetZoneTouches(zone) + 1;
+        nearbyZone = zone;
+        nearbyZoneCol = col;
+    }
+
+    private void ZoneExit(Collider2D col)
+    {
+        ChainClimbZone zone = col.GetComponentInParent<ChainClimbZone>();
+        if (zone == null) return;
+        zoneTouches[zone] = Mathf.Max(0, GetZoneTouches(zone) - 1);
+        if (zoneTouches[zone] == 0)
+        {
+            if (nearbyZone == zone)
+            {
+                nearbyZone = null;
+                nearbyZoneCol = null;
+            }
+            if (zone == blockedZone && climbState == ClimbState.Normal)
+                blockedZone = null;
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other) { ZoneEnter(other); }
+    void OnTriggerExit2D(Collider2D other) { ZoneExit(other); }
+    // ---------------- Ground check ----------------
+    // Grounded = touching anything tagged "Ground" OR standing on top of any solid surface
+    // (many platforms, e.g. in the Trap level, are not tagged "Ground").
+    private readonly HashSet<Collider2D> groundContacts = new HashSet<Collider2D>();
+
+    private void UpdateGround(Collision2D c)
+    {
+        if (c.collider.isTrigger) return;
+        bool standingOn = c.gameObject.CompareTag("Ground");
+        for (int i = 0; i < c.contactCount && !standingOn; i++)
+        {
+            if (c.GetContact(i).normal.y > 0.5f) standingOn = true;   // surface is below us
+        }
+        if (standingOn) groundContacts.Add(c.collider);
+        else groundContacts.Remove(c.collider);
+        isOnGround = groundContacts.Count > 0;
+    }
+
+    void OnCollisionStay2D(Collision2D c)
+    {
+        if (climbState == ClimbState.Normal) UpdateGround(c);
+    }
+
+    void OnCollisionExit2D(Collision2D c)
+    {
+        ZoneExit(c.collider);
+        groundContacts.Remove(c.collider);
+        if (groundContacts.Count == 0) isOnGround = false;
+    }
+
     void OnCollisionEnter2D(Collision2D collision2D)
     {
+        ZoneEnter(collision2D.collider);
+
         if (collision2D.gameObject.CompareTag("Ground"))
         {
             isOnGround = true;
         }
+        if (climbState == ClimbState.Normal) UpdateGround(collision2D);
        
     }
 }

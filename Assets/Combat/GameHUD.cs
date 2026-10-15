@@ -39,7 +39,7 @@ public class GameHUD : MonoBehaviour
     public Sprite coinSprite;              // also used for coin pickups in the world
 
     /// <summary>Scenes where the HUD should NOT appear.</summary>
-    public static readonly string[] HiddenInScenes = { "Main Menu" };
+    public static readonly string[] HiddenInScenes = { "Main Menu", "CoordiScene" };
     public const string PrefabPath = "UI/GameHUD";
 
     private static GameHUD instance;

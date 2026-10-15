@@ -90,6 +90,15 @@ public class Collectible : MonoBehaviour
     {
         basePos = transform.position;
         spawnTime = Time.time;
+
+        // Placed directly in a scene (not spawned by an enemy): read the icon from our own sprite
+        if (iconSprite == null)
+        {
+            SpriteRenderer sr = GetComponent<SpriteRenderer>();
+            if (sr != null) { iconSprite = sr.sprite; iconTint = sr.color; }
+        }
+        Collider2D col = GetComponent<Collider2D>();
+        if (col != null) col.isTrigger = true;
     }
 
     private void Update()
